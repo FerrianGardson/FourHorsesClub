@@ -1,301 +1,355 @@
 /* Google Web Fonts */
 
 .merriweather-light {
-    font-family: "Merriweather", serif;
-    font-weight: 300;
-    font-style: normal;
-  }
-  
-  .merriweather-regular {
-    font-family: "Merriweather", serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-  .merriweather-bold {
-    font-family: "Merriweather", serif;
-    font-weight: 700;
-    font-style: normal;
-  }
-  
-  .merriweather-black {
-    font-family: "Merriweather", serif;
-    font-weight: 900;
-    font-style: normal;
-  }
-  
-  .merriweather-light-italic {
-    font-family: "Merriweather", serif;
-    font-weight: 300;
-    font-style: italic;
-  }
-  
-  .merriweather-regular-italic {
-    font-family: "Merriweather", serif;
-    font-weight: 400;
-    font-style: italic;
-  }
-  
-  .merriweather-bold-italic {
-    font-family: "Merriweather", serif;
-    font-weight: 700;
-    font-style: italic;
-  }
-  
-  .merriweather-black-italic {
-    font-family: "Merriweather", serif;
-    font-weight: 900;
-    font-style: italic;
-  }
-  
-  /* <uniquifier>: Use a unique and descriptive class name
-        <weight>: Use a value from 400 to 900 */
-  
-  .golos-text-regular {
-    font-family: "Golos Text", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400px;
-    font-style: normal;
-  }
-  
-  /* Main */
-  
-  body {
-    color: #313131;
-    background-color: #ffffff;
-    margin: 0;
-    font-family: "Golos Text", sans-serif;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 120%;
-  }
-  
-  section > div {
-    max-width: 1360px;
-    margin: auto;
-  }
-  
-  h1,
-  h2 {
-    font-family: "Merriweather", serif;
-    font-weight: 400;
-    font-style: normal;
-    text-transform: uppercase;
-    font-size: 60px;
-    line-height: 110%;
-  }
-  
-  h2 {
-    font-size: 36px;
-    line-height: 135%;
-  }
-  
-  .subheader {
-    font-family: "Golos Text, sans-serif";
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 130%;
-    text-align: center;
-    margin-top: 24px;
-    margin-bottom: 40px;
-  }
-  
-  section.header {
-    background-color: #e9ded4;
-    background-image: url("img/header-pic.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover, auto;
-    height: 700px;
-    padding-top: 26px;
-    padding-left: 72px;
-    position: relative;
-  }
-  
-  .noise-overlay, .overlay-wrap::before, section.header::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("img/noise.png");
-    background-repeat: repeat;
-    /* background-size: cover; */
-    mix-blend-mode: color-burn; /* Применяет color-burn только к noise.png */
-    pointer-events: none; /* Чтобы не блокировать взаимодействие с содержимым */
-    z-index: 1; /* Чтобы псевдоэлемент находился выше других фонов */
-    max-width: none;
-  }
-  
-  .seans img {
-      position: relative;
-  }
-  
-  .overlay-wrap {
-      position: relative;
-  }
-  
-  .header .content {
-    width: 542px;
-  }
-  
-  .content h1 {
-    margin: 0;
-  }
-  
-  .logo span {
-    font-family: "Golos Text", sans-serif;
-    font-weight: bold;
-    font-size: 16.65px;
-    line-height: 108%;
-    color: #595653;
-    text-transform: uppercase;
-  }
-  .logo {
-    display: flex;
-    gap: 6px;
-    margin-bottom: 62px;
-  }
-  
-  button {
-    padding: 20px;
-    border-radius: 66px;
-    color: white;
-    background: black;
-    font-family: "Golos Text", sans-serif;
-    font-size: 16px;
-    line-height: 130%;
-    font-weight: 500;
-    border: none;
-    cursor: pointer;
-    z-index: 100;
-  }
-  
-  button:hover {
-    background: #fbce51;
-    color: #1f1f1f;
-  }
-  
-  button.chameleon {
-    color: black;
-    background: none;
-    border: 2px solid #1f1f1f;
-  }
-  
-  button.chameleon:hover {
-    background: #1f1f1f;
-    color: white;
-  }
-  
-  .row {
-    display: flex;
-  }
-  
-  .bullet {
-    background: white;
-    width: 6px;
-    height: 6px;
-    border-radius: 6px;
-  }
-  
-  .running-line-wrap {
-    background: #f54932;
-    color: white;
-    font-family: "Merriweather", sans-serif;
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 110%;
-    padding: 12px;
-    gap: 12px;
-    flex-direction: row;
-    overflow: hidden;
-  }
-  
-  #running-line {
-    display: flex;
-    max-width: none;
-    flex-wrap: nowrap; /* Запрещает перенос элементов на новую строку */
-    /* overflow-x: visible; Добавляет горизонтальную прокрутку при переполнении */
-    white-space: nowrap; /* Запрещает перенос текста на новую строку */
-    align-items: center;
-  }
-  
-  .running-line-wrap span,
-  .running-line-wrap .bullet {
-    flex: 0 0 auto; /* Элементы не будут растягиваться или сжиматься */
-    margin-right: 12px; /* Пример отступа между элементами */
-  }
-  
-  /* Скрываем каретку скролла для WebKit */
-  #running-line::-webkit-scrollbar {
-    display: none;
-  }
-  
-  /* Скрываем каретку скролла для других браузеров */
-  #running-line {
-    -ms-overflow-style: none; /* Internet Explorer 10+ */
-    scrollbar-width: none; /* Firefox */
-  }
-  
-  section.support > div {
-    display: flex;
-    gap: 16px;
-    margin-top: 80px;
-    margin-bottom: 64px;
-  }
-  
-  span.red {
-    color: #f54932;
-    font-weight: bold;
-  }
-  
-  section.seans > div {
-    display: flex;
-    gap: 44px;
-  }
-  
-  /* Таблица */
-  
-  td {
-    padding: 16px;
-    border-bottom: 2px solid #d0d0d0;
-  }
-  
-  /* Стили для первой ячейки в каждой строке */
-  tbody td:nth-child(1) {
-    opacity: 0.7; /* Полупрозрачность 70% */
-    border-right: 2px solid #d0d0d0;
-  }
-  
-  /* Стили для второй ячейки в каждой строке */
-  tbody td:nth-child(2) {
-    font-weight: bold; /* Жирный шрифт */
-  }
-  
-  table {
-    width: 100%;
-    border-collapse: collapse; /* Объединяет границы ячеек в одну линию */
-  }
-  
-  tr:last-child td {
-    border-bottom: none;
-  }
-  
-  span.crossed {
-    position: relative; /* Для абсолютного позиционирования псевдоэлемента */
-    display: inline-block; /* Необходим для установки размеров и позиционирования псевдоэлемента */
-  }
-  
-  span.crossed::after {
-    content: ""; /* Необходимо для создания псевдоэлемента */
-    position: absolute;
-    left: 0;
-    bottom: 34%; /* Позиционирует линию по центру высоты текста */
-    width: 100%;
-    height: 2px; /* Толщина линии */
-    background-color: #f54932; /* Цвет линии */
-    border-radius: 2px; /* Скругление краёв линии */
-  }
-  
-  
+  font-family: "Merriweather", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.merriweather-regular {
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.merriweather-bold {
+  font-family: "Merriweather", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.merriweather-black {
+  font-family: "Merriweather", serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.merriweather-light-italic {
+  font-family: "Merriweather", serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.merriweather-regular-italic {
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.merriweather-bold-italic {
+  font-family: "Merriweather", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.merriweather-black-italic {
+  font-family: "Merriweather", serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+/* <uniquifier>: Use a unique and descriptive class name
+          <weight>: Use a value from 400 to 900 */
+
+.golos-text-regular {
+  font-family: "Golos Text", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400px;
+  font-style: normal;
+}
+
+/* Main */
+
+body {
+  color: #313131;
+  background-color: #ffffff;
+  margin: 0;
+  font-family: "Golos Text", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+}
+
+section > div {
+  max-width: 1222px;
+  margin: auto;
+}
+
+h1,
+h2 {
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+  font-size: 60px;
+  line-height: 110%;
+}
+
+h2 {
+  font-size: 36px;
+  line-height: 135%;
+}
+
+.subheader {
+  font-family: "Golos Text, sans-serif";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 130%;
+  text-align: center;
+  margin-top: 24px;
+  margin-bottom: 40px;
+}
+
+section.header {
+  background-color: #e9ded4;
+  background-image: url("img/header-pic.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover, auto;
+  height: 700px;
+  padding-top: 26px;
+  padding-left: 72px;
+  position: relative;
+  margin: 0;
+}
+
+.noise-overlay,
+.overlay-wrap::before,
+section.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("img/noise.png");
+  background-repeat: repeat;
+  /* background-size: cover; */
+  mix-blend-mode: color-burn; /* Применяет color-burn только к noise.png */
+  pointer-events: none; /* Чтобы не блокировать взаимодействие с содержимым */
+  z-index: 1; /* Чтобы псевдоэлемент находился выше других фонов */
+  max-width: none;
+}
+
+.seans img {
+  position: relative;
+  width: 474px;
+  height: 527px;
+}
+
+.overlay-wrap {
+  position: relative;
+}
+
+.header .content {
+  width: 542px;
+}
+
+.content h1 {
+  margin: 0;
+}
+
+.logo span {
+  font-family: "Golos Text", sans-serif;
+  font-weight: bold;
+  font-size: 16.65px;
+  line-height: 108%;
+  color: #595653;
+  text-transform: uppercase;
+}
+.logo {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 62px;
+}
+
+button {
+  padding: 20px;
+  border-radius: 66px;
+  color: white;
+  background: black;
+  font-family: "Golos Text", sans-serif;
+  font-size: 16px;
+  line-height: 130%;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  z-index: 100;
+}
+
+button:hover {
+  background: #fbce51;
+  color: #1f1f1f;
+}
+
+button.chameleon {
+  color: black;
+  background: none;
+  border: 2px solid #1f1f1f;
+}
+
+button.chameleon:hover {
+  background: #1f1f1f;
+  color: white;
+}
+
+.row {
+  display: flex;
+}
+
+.bullet {
+  background: white;
+  width: 6px;
+  height: 6px;
+  border-radius: 6px;
+}
+
+section.running-line-wrap {
+  background: #f54932;
+  color: white;
+  font-family: "Merriweather", sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 110%;
+  padding: 12px;
+  gap: 12px;
+  flex-direction: row;
+  overflow: hidden;
+  margin: 0;
+}
+
+#running-line {
+  display: flex;
+  max-width: none;
+  flex-wrap: nowrap; /* Запрещает перенос элементов на новую строку */
+  /* overflow-x: visible; Добавляет горизонтальную прокрутку при переполнении */
+  white-space: nowrap; /* Запрещает перенос текста на новую строку */
+  align-items: center;
+}
+
+.running-line-wrap span,
+.running-line-wrap .bullet {
+  flex: 0 0 auto; /* Элементы не будут растягиваться или сжиматься */
+  margin-right: 12px; /* Пример отступа между элементами */
+}
+
+/* Скрываем каретку скролла для WebKit */
+#running-line::-webkit-scrollbar {
+  display: none;
+}
+
+/* Скрываем каретку скролла для других браузеров */
+#running-line {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+
+section.support > div {
+  display: flex;
+  gap: 64px;
+  margin-top: 80px;
+  margin-bottom: 64px;
+}
+
+.support h2 {
+  max-width: 764px;
+}
+
+span.red {
+  color: #f54932;
+  font-weight: bold;
+}
+
+section.seans > div {
+  display: flex;
+  gap: 44px;
+}
+
+/* Таблица */
+
+td {
+  padding: 16px;
+  border-bottom: 2px solid #d0d0d0;
+}
+
+/* Стили для первой ячейки в каждой строке */
+tbody td:nth-child(1) {
+  opacity: 0.7; /* Полупрозрачность 70% */
+  border-right: 2px solid #d0d0d0;
+}
+
+/* Стили для второй ячейки в каждой строке */
+tbody td:nth-child(2) {
+  font-weight: bold; /* Жирный шрифт */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse; /* Объединяет границы ячеек в одну линию */
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+span.crossed {
+  position: relative; /* Для абсолютного позиционирования псевдоэлемента */
+  display: inline-block; /* Необходим для установки размеров и позиционирования псевдоэлемента */
+}
+
+span.crossed::after {
+  content: ""; /* Необходимо для создания псевдоэлемента */
+  position: absolute;
+  left: 0;
+  bottom: 34%; /* Позиционирует линию по центру высоты текста */
+  width: 100%;
+  height: 2px; /* Толщина линии */
+  background-color: #f54932; /* Цвет линии */
+  border-radius: 2px; /* Скругление краёв линии */
+}
+
+.stage {
+  padding: 20px;
+  background: url(img/paper.jpg);
+  font-weight: 600;
+  display: flex;
+  gap: 16px;
+  flex-shrink: 0;
+  flex-wrap: nowrap;
+  position: relative;
+}
+
+section:last-of-type {
+  margin-bottom: 240px;
+}
+
+.number {
+  width: 36px;
+  height: 36px;
+  border-radius: 60px;
+  background: white;
+  text-align: center;
+  line-height: 160%;
+  flex-shrink: 0;
+}
+
+.stage-grid {
+  gap: 20px;
+  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 394px 394px 394px;
+  grid-template-rows: 112px 112px 136px;
+}
+
+section {
+  margin: 200px 0;
+}
+
+section.support {
+  margin-top: 80px;
+  margin-bottom: 64px;
+}
+
+section.seans {
+  margin-top: 0;
+}
