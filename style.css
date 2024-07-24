@@ -49,7 +49,7 @@
 }
 
 /* <uniquifier>: Use a unique and descriptive class name
-          <weight>: Use a value from 400 to 900 */
+            <weight>: Use a value from 400 to 900 */
 
 .golos-text-regular {
   font-family: "Golos Text", sans-serif;
@@ -68,15 +68,20 @@ body {
   font-weight: 400;
   font-size: 20px;
   line-height: 120%;
+  display: flex;
+  flex-direction: column;
 }
 
-section > div {
+section > div,
+footer > div,
+header > div {
   max-width: 1222px;
   margin: auto;
 }
 
 h1,
-h2 {
+h2,
+h3 {
   font-family: "Merriweather", serif;
   font-weight: 400;
   font-style: normal;
@@ -86,12 +91,12 @@ h2 {
 }
 
 h2 {
-  font-size: 36px;
+  font-size: 54px;
   line-height: 135%;
 }
 
 .subheader {
-  font-family: "Golos Text, sans-serif";
+  font-family: "Golos Text", sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 130%;
@@ -135,10 +140,13 @@ section.header::before {
   position: relative;
   width: 474px;
   height: 527px;
+  scale: 110%;
+  top: 24px;
 }
 
 .overlay-wrap {
   position: relative;
+  box-sizing: border-box;
 }
 
 .header .content {
@@ -161,6 +169,8 @@ section.header::before {
   display: flex;
   gap: 6px;
   margin-bottom: 62px;
+  z-index: 100;
+  position: relative;
 }
 
 button {
@@ -175,6 +185,7 @@ button {
   border: none;
   cursor: pointer;
   z-index: 100;
+  width: fit-content;
 }
 
 button:hover {
@@ -218,7 +229,7 @@ section.running-line-wrap {
   margin: 0;
 }
 
-#running-line {
+.running-line {
   display: flex;
   max-width: none;
   flex-wrap: nowrap; /* Запрещает перенос элементов на новую строку */
@@ -252,7 +263,7 @@ section.support > div {
 }
 
 .support h2 {
-  max-width: 764px;
+  /* max-width: 764px; */
 }
 
 span.red {
@@ -309,18 +320,21 @@ span.crossed::after {
 }
 
 .stage {
+  /* width: 394px; */
+  /* height: 112px; */
   padding: 20px;
   background: url(img/paper.jpg);
   font-weight: 600;
   display: flex;
   gap: 16px;
+  /* box-sizing: border-box; */
   flex-shrink: 0;
   flex-wrap: nowrap;
   position: relative;
 }
 
 section:last-of-type {
-  margin-bottom: 240px;
+  /* margin-bottom: 240px; */
 }
 
 .number {
@@ -334,6 +348,7 @@ section:last-of-type {
 }
 
 .stage-grid {
+  /* display: flex; */
   gap: 20px;
   flex-wrap: wrap;
   display: grid;
@@ -342,7 +357,9 @@ section:last-of-type {
 }
 
 section {
-  margin: 200px 0;
+  margin: 100px 0;
+  /* margin-top: 80px; */
+  /* margin-bottom: 64px; */
 }
 
 section.support {
@@ -352,4 +369,102 @@ section.support {
 
 section.seans {
   margin-top: 0;
+}
+
+h3 {
+  font-size: 36px;
+  line-height: 135%;
+}
+
+button.about {
+  background: none;
+  color: #3057a2;
+  border: 1px solid #3057a2;
+  padding: 12px;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 24px;
+  line-height: 120%;
+}
+
+.member p {
+  opacity: 60%;
+  margin: 0;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.member h4 {
+  margin-top: 28px;
+  margin-bottom: 6px;
+  text-align: center;
+}
+
+.member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 394px;
+}
+
+.members .header-row {
+  gap: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+.carousel {
+  display: flex;
+  gap: 20px;
+  overflow: hidden;
+}
+
+button.about:hover {
+  background: #3057a2;
+  color: white;
+}
+
+.members .header-row h2 {
+  margin: 0;
+}
+
+button.carousel-button {
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  font-size: 32px;
+  font-weight: 100;
+}
+
+.members .position {
+  display: flex;
+  flex-direction: row;
+  font-size: 16px;
+  gap: 3px;
+}
+
+.carousel-buttons {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+footer {
+  background: #e9ded4;
+  margin: 0;
+  font-size: 16px;
+  font-family: "Golos Text", sans-serif;
+  color: #313131;
+  padding: 40px 72px 72px 72px;
+}
+
+footer p {
+  opacity: 60%;
+}
+
+section.members {
+  margin-bottom: 140px;
 }
