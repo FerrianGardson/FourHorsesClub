@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Основная HTML-страница</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style-1366.css" />
+    <link rel="stylesheet" href="style-375.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -53,11 +54,18 @@
     </section>
     <section class="support">
       <div>
-        <h3>
+        <h3 class="desktop">
           Чтобы&nbsp;поддержать Международный васюкинский турнир посетите лекцию
           на&nbsp;тему: <span class="red">«Плодотворная дебютная идея»</span>
         </h3>
+        <h3 class="mobile">
+          Чтобы&nbsp;поддержать Международный васюкинский турнир
+        </h3>
         <img src="img/men.png" />
+        <h3 class="mobile">
+          посетите лекцию на&nbsp;тему:
+          <span class="red">«Плодотворная дебютная идея»</span>
+        </h3>
       </div>
     </section>
     <section class="seans">
@@ -71,7 +79,7 @@
             >
             гроссмейстера О.&nbsp;Бендера
           </h3>
-          <table>
+          <table class="desktop">
             <tbody>
               <tr>
                 <td>Место проведения:</td>
@@ -97,7 +105,7 @@
               </tr>
             </tbody>
           </table>
-          <p style="color: #3057a2; padding-left: 16px">
+          <p class="mihelson" style="">
             По&nbsp;всем вопросам обращаться в&nbsp;администрацию
             к&nbsp;К.&nbsp;Михельсону
           </p>
@@ -107,15 +115,7 @@
     <section>
       <div>
         <div style="width: 806px; /* margin-top: 200px; */ margin-bottom: 54px">
-          <h2
-            style="
-              font-size: 54px;
-              line-height: 90%; /* margin-top: 200px; */ /* width: 806px; */ /* display: inline-block; */
-              display: inline;
-            "
-          >
-            Этапы преображения Васюков
-          </h2>
+          <h2 style="">Этапы преображения Васюков</h2>
           <p
             style="
               color: #3057a2;
@@ -127,7 +127,7 @@
             Будущие источники обогащения васюкинцев
           </p>
         </div>
-        <div class="stage-grid">
+        <div class="stage-grid desktop">
           <div class="stage">
             <div class="number">1</div>
             <div class="text">
@@ -189,24 +189,24 @@
     <section class="members">
       <div>
         <div class="header-row">
-          <h2
-            style="
-              font-size: 54px; /* line-height: 90%; */ /* margin-top: 200px; */ /* width: 806px; */ /* display: inline-block; */ /* display: inline; */
-            "
-          >
-            Участники турнира
-          </h2>
-          <div class="carousel-buttons">
-            <button class="carousel-button left">&lt;</button>
+          <h2 style="">Участники турнира</h2>
+          <div class="carousel-buttons desktop">
+            <button class="carousel-button left" disabled="">&lt;</button>
             <div class="position">
-              <span class="current">3</span><span>/</span
+              <span class="current">1</span><span>/</span
               ><span class="all">6</span>
             </div>
             <button class="carousel-button right">&gt;</button>
           </div>
         </div>
         <div class="carousel">
-          <div class="row">
+          <div
+            class="row"
+            style="
+              transition: transform 0.5s ease-in-out 0s;
+              transform: translateX(0px);
+            "
+          >
             <div class="member">
               <img src="img/portrait.png" />
               <h4>Хозе-Рауль Капабланка</h4>
@@ -244,6 +244,14 @@
               <button class="about">Подробнее</button>
             </div>
           </div>
+        </div>
+        <div class="carousel-buttons mobile">
+          <button class="carousel-button left" disabled="">&lt;</button>
+          <div class="position">
+            <span class="current">1</span><span>/</span
+            ><span class="all">6</span>
+          </div>
+          <button class="carousel-button right">&gt;</button>
         </div>
       </div>
     </section>

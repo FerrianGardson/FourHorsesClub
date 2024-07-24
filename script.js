@@ -18,70 +18,79 @@ document.addEventListener("DOMContentLoaded", function () {
     requestAnimationFrame(animateBackgroundPosition);
   }
 
-console.log('Карусель');
+  console.log("Карусель");
 
-const carousel = document.querySelector(".carousel");
-const rows = document.querySelector(".carousel .row");
-const prevButton = document.querySelector(".carousel-button.left");
-const nextButton = document.querySelector(".carousel-button.right");
-const currentPosition = document.querySelector(".position .current");
-const totalPosition = document.querySelector(".position .all");
+  const carousel = document.querySelector(".carousel");
+  const row = document.querySelector(".carousel .row");
+  const prevButton = document.querySelectorAll(".carousel-button.left");
+  const nextButton = document.querySelectorAll(".carousel-button.right");
+  const currentPosition = document.querySelector(".position .current");
+  const totalPosition = document.querySelector(".position .all");
 
-let currentIndex = 0;
-const members = document.querySelectorAll(".carousel .member");
-const totalMembers = members.length;
-
-function updateCarousel() {
-  const containerWidth = carousel.offsetWidth;
-  const memberWidth = members[0].offsetWidth;
-  const visibleCount = Math.floor(containerWidth / memberWidth);
-  const totalRows = Math.ceil(totalMembers / visibleCount);
-
-  const offset = -currentIndex * (memberWidth * visibleCount);
-  carousel.style.transition = "transform 0.5s ease-in-out";
-  carousel.style.transform = `translateX(${offset}px)`;
   
-  currentPosition.textContent = Math.ceil((currentIndex + 1) / visibleCount);
-  totalPosition.textContent = totalRows;
+  let currentIndex = 0;
 
-  // Обновляем состояние кнопок
-  updateButtons();
-}
+  function updateCarousel() {
+    const containerWidth = carousel.offsetWidth;
+    const memberWidth = row.querySelector(".member").offsetWidth;
+    const visibleCount = Math.floor(containerWidth / memberWidth);
+    const totalMembers = row.children.length;
 
-function updateButtons() {
-  const containerWidth = carousel.offsetWidth;
-  const memberWidth = members[0].offsetWidth;
-  const visibleCount = Math.floor(containerWidth / memberWidth);
-  const totalRows = Math.ceil(totalMembers / visibleCount);
+    const totalRows = Math.ceil(totalMembers / visibleCount);
+    const offset = -currentIndex * containerWidth;
 
-  prevButton.disabled = currentIndex === 0;
-  nextButton.disabled = currentIndex >= totalRows - 1;
-}
+    row.style.transition = "transform 0.5s ease-in-out";
+    row.style.transform = `translateX(${offset}px)`;
 
-function showNextRow() {
-  const containerWidth = carousel.offsetWidth;
-  const memberWidth = members[0].offsetWidth;
-  const visibleCount = Math.floor(containerWidth / memberWidth);
-  const totalRows = Math.ceil(totalMembers / visibleCount);
+    // Обновляем счётчик
+    const startIndex = currentIndex * visibleCount + 1;
+    const endIndex = Math.min(startIndex + visibleCount - 1, totalMembers);
 
-  if (currentIndex < totalRows - 1) {
-    currentIndex++;
-    updateCarousel();
+    currentPosition.textContent = `${endIndex}`;
+    totalPosition.textContent = totalMembers;
+
+    updateButtons();
   }
-}
 
-function showPrevRow() {
-  if (currentIndex > 0) {
-    currentIndex--;
-    updateCarousel();
+  function updateButtons() {
+    const containerWidth = carousel.offsetWidth;
+    const memberWidth = row.querySelector(".member").offsetWidth;
+    const visibleCount = Math.floor(containerWidth / memberWidth);
+    const totalMembers = row.children.length;
+
+    const totalRows = Math.ceil(totalMembers / visibleCount);
+
+    prevButton.disabled = currentIndex === 0;
+    nextButton.disabled = currentIndex >= totalRows - 1;
   }
-}
 
-nextButton.addEventListener("click", showNextRow);
-prevButton.addEventListener("click", showPrevRow);
+  function showNextRow() {
+    const containerWidth = carousel.offsetWidth;
+    const memberWidth = row.querySelector(".member").offsetWidth;
+    const visibleCount = Math.floor(containerWidth / memberWidth);
+    const totalMembers = row.children.length;
 
-window.addEventListener("resize", updateCarousel); // Обновляем карусель при изменении размера окна
+    const totalRows = Math.ceil(totalMembers / visibleCount);
 
-updateCarousel(); // Инициализация карусели
+    if (currentIndex < totalRows - 1) {
+      currentIndex++;
+      updateCarousel();
+    }
+  }
+
+  function showPrevRow() {
+    if (currentIndex > 0) {
+      currentIndex--;
+      updateCarousel();
+    }
+  }
+
+  nextButton.addEventListener("click", showNextRow);
+  prevButton.addEventListener("click", showPrevRow);
+
+  window.addEventListener("resize", updateCarousel); // Обновляем карусель при изменении размера окна
+
+  updateCarousel(); // Инициализация карусели
+
 
 });
