@@ -543,8 +543,32 @@ section.header::before {
 
 /* Адаптив */
 
-.mobile {display:none}
+.mobile {
+  display: none;
+}
 p.mihelson {
-    color: #3057a2;
-    padding-left: 16px;
+  color: #3057a2;
+  padding-left: 16px;
+}
+
+section.running-line-wrap > div {
+  overflow: visible;
+}
+
+img.plane {
+  position: absolute;
+  right: -60px;
+  bottom: 0;
+}
+
+p.stages-subheader {
+  color: #3057a2;
+  width: 280px;
+  position: relative;
+  top: -109px;
+  left: 290px;
+}
+
+.stages h2 {
+  width: 806px;
 }

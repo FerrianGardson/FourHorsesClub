@@ -71,12 +71,62 @@
     padding: 18px 20px;
   }
 
-  .header button.chameleon {
+  button.chameleon {
     background: white;
+    border: none;
+    opacity: 90%;
   }
 
   p.subheader {
     text-align: left;
     margin-bottom: 32px;
+  }
+
+  footer {
+    line-height: 120%;
+    padding: 40px 20px 60px 20px;
+  }
+
+  button.chameleon:hover {
+    background: #fbce51;
+    color: inherit;
+  }
+  .stage-grid.mobile {
+    display: flex;
+    margin-top: 148px;
+  }
+  img.plane {
+    top: -150px;
+    left: 0;
+  }
+
+  .stage {
+    padding: 34px 24px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+
+  .block {
+    width: 100%;
+    display: flex;
+    column-gap: 16px;
+  }
+
+  div.text {
+    width: 100%;
+  }
+
+  p.stages-subheader {
+    margin-left: 0;
+    display: block;
+    margin-top: 12px;
+    width: auto;
+    position: initial;
+  }
+
+  .stages h2 {
+    width: auto;
+    margin: 0;
   }
 }
