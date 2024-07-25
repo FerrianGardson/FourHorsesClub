@@ -27,10 +27,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const rows = carouselContainer.querySelectorAll(".row");
 
     rows.forEach((carousel) => {
+        // Кнопки и позиционные элементы
         const prevButtons = carouselContainer.querySelectorAll(".carousel-button.left");
         const nextButtons = carouselContainer.querySelectorAll(".carousel-button.right");
         const currentPositions = carouselContainer.querySelectorAll(".position .current");
         const totalPositions = carouselContainer.querySelectorAll(".position .all");
+        const numbersContainer = carouselContainer.querySelector(".position .numbers");
+        const bulletsContainer = carouselContainer.querySelector(".position .bullets");
 
         let cardWidth = carouselContainer.querySelector(".card").offsetWidth;
         let carouselWidth = carouselContainer.offsetWidth;
@@ -48,15 +51,63 @@ document.addEventListener("DOMContentLoaded", function () {
             currentPositions.forEach(position => position.textContent = endIndex);
             totalPositions.forEach(position => position.textContent = totalCards);
 
+            // Обновляем позиционные кружки и номера
+            updateBullets();
+            updateNumbers();
+
             prevButtons.forEach(button => button.disabled = currentIndex === 0);
             nextButtons.forEach(button => button.disabled = endIndex >= totalCards);
+        }
+
+        function updateNumbers() {
+            if (numbersContainer) {
+                // Обновление старого счётчика
+                numbersContainer.innerHTML = '';
+                const currentNumber = document.createElement('span');
+                currentNumber.className = 'current';
+                currentNumber.textContent = currentIndex + 1; // Начинаем с 1
+                numbersContainer.appendChild(currentNumber);
+                const separator = document.createElement('span');
+                separator.textContent = '/';
+                numbersContainer.appendChild(separator);
+                const totalNumber = document.createElement('span');
+                totalNumber.className = 'all';
+                totalNumber.textContent = totalCards;
+                numbersContainer.appendChild(totalNumber);
+            }
+        }
+
+        function updateBullets() {
+            if (bulletsContainer) {
+                // Очистить контейнер кружков
+                bulletsContainer.innerHTML = '';
+
+                for (let i = 0; i < totalCards; i++) {
+                    const bullet = document.createElement('div');
+                    bullet.className = 'bullet';
+                    bullet.style.width = '10px';
+                    bullet.style.height = '10px';
+                    bullet.style.borderRadius = '50%';
+                    bullet.style.backgroundColor = i === currentIndex ? '#313131' : '#D9D9D9';
+                    bullet.style.display = 'inline-block';
+                    bullet.style.margin = '0 2px';
+                    bullet.style.cursor = 'pointer';
+
+                    bullet.addEventListener('click', () => {
+                        currentIndex = i;
+                        updateCarousel();
+                    });
+
+                    bulletsContainer.appendChild(bullet);
+                }
+            }
         }
 
         function showNextRow() {
             if (currentIndex + cardsPerView < totalCards) {
                 currentIndex += cardsPerView;
             } else {
-                currentIndex = 0; // Reset to first position
+                currentIndex = 0; // Сброс к первой позиции
             }
             updateCarousel();
         }
@@ -64,7 +115,7 @@ document.addEventListener("DOMContentLoaded", function () {
         function showPrevRow() {
             if (currentIndex > 0) {
                 currentIndex -= cardsPerView;
-                if (currentIndex < 0) currentIndex = 0; // Make sure it doesn't go negative
+                if (currentIndex < 0) currentIndex = 0; // Убедиться, что не уходит в отрицательные значения
                 updateCarousel();
             }
         }
@@ -97,6 +148,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
 
 
 

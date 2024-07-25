@@ -22,12 +22,12 @@
     p.mihelson {
       padding-left: 0;
     }
-    section.support {
+    #support {
       margin-top: 0px;
       margin-bottom: 0;
     }
   
-    section.support > div {
+    #support > div {
       margin-top: 48px;
       margin-bottom: 34px;
     }
@@ -38,9 +38,9 @@
   
     .carousel-buttons.mobile {
       display: flex;
-      width: 150px;
+      width: fit-content;
       margin: auto;
-      margin-top: 40px;
+      margin-top: 28px;
     }
   
     #members .header-row {
@@ -60,11 +60,11 @@
       line-height: 110%;
     }
   
-    section.header {
+    header {
       padding: 20px;
     }
   
-    .header button {
+    header button {
       width: 100%;
       padding: 18px 20px;
     }
@@ -94,11 +94,11 @@
       margin-top: 148px;
     }
     img.plane {
-      top: -140px;
+      top: -120px;
       left: 0;
     }
   
-    .stages .card {
+    #stages .card {
       padding: 34px 24px;
       display: flex;
       flex-direction: column;
@@ -106,7 +106,7 @@
       padding-top: 62px;
     }
   
-    .stages .block {
+    #stages .block {
       width: 100%;
       display: flex;
       column-gap: 16px;

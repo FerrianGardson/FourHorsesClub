@@ -104,7 +104,7 @@ h2 {
   margin-bottom: 40px;
 }
 
-section.header {
+header {
   background-color: #e9ded4;
   background-image: url("img/header-pic.png");
   background-repeat: no-repeat;
@@ -120,7 +120,7 @@ section.header {
 
 .noise-overlay,
 .overlay-wrap::before,
-section.header::before {
+header::before {
   content: "";
   position: absolute;
   top: 0;
@@ -137,7 +137,7 @@ section.header::before {
   max-width: none;
 }
 
-.seans img {
+#seans img {
   position: relative;
   width: 474px;
   height: 527px;
@@ -151,7 +151,7 @@ section.header::before {
   overflow: visible;
 }
 
-.header .content {
+header .content {
   width: 542px;
 }
 
@@ -261,7 +261,7 @@ section.running-line-wrap {
   scrollbar-width: none; /* Firefox */
 }
 
-section.support > div {
+#support > div {
   display: flex;
   column-gap: 64px;
   row-gap: 24px;
@@ -270,7 +270,7 @@ section.support > div {
   flex-wrap: wrap;
 }
 
-.support h2 {
+#support h2 {
   /* max-width: 764px; */
 }
 
@@ -279,14 +279,14 @@ span.red {
   font-weight: bold;
 }
 
-section.seans > div {
+#seans > div {
   display: flex;
   gap: 44px;
   flex-wrap: wrap;
   overflow: visible;
 }
 
-.support h3 {
+#support h3 {
   max-width: 764px;
   margin: 0;
 }
@@ -296,7 +296,7 @@ img {
   height: fit-content;
 }
 
-.seans .content {
+#seans .content {
   max-width: 704px;
 }
 
@@ -346,7 +346,7 @@ span.crossed::after {
   border-radius: 2px; /* Скругление краёв линии */
 }
 
-.stages .card {
+#stages .card, .stage {
   /* width: 394px; */
   /* height: 112px; */
   padding: 20px;
@@ -391,12 +391,12 @@ section {
   /* margin-bottom: 64px; */
 }
 
-section.support {
+#support {
   margin-top: 80px;
   margin-bottom: 64px;
 }
 
-section.seans {
+#seans {
   margin-top: 0;
 }
 
@@ -471,8 +471,10 @@ button.carousel-button {
   width: 44px;
   height: 44px;
   padding: 0;
-  font-size: 32px;
-  font-weight: 100;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 button.carousel-button:disabled {
@@ -483,7 +485,7 @@ button.carousel-button:disabled:hover {
   color: white;
 }
 
-.carousel .position {
+.carousel .position > .numbers {
   display: flex;
   flex-direction: row;
   font-size: 16px;
@@ -492,6 +494,8 @@ button.carousel-button:disabled:hover {
 
 .carousel-buttons {
   display: flex;
+  width: fit-content;
+  margin: auto;
   gap: 14px;
   align-items: center;
 }
@@ -511,7 +515,7 @@ footer p {
   opacity: 60%;
 }
 
-section.members {
+#members {
   margin-bottom: 140px;
 }
 
@@ -539,7 +543,7 @@ section.members {
 
 .noise-overlay,
 .overlay-wrap::before,
-section.header::before {
+header::before {
   background-position: var(
     --background-position
   ); /* Начальное положение фона */
@@ -575,11 +579,11 @@ p.stages-subheader {
   left: 290px;
 }
 
-.stages h2 {
+#stages h2 {
   width: 806px;
 }
 
-.seans h3 {
+#seans h3 {
     margin-top: 0;
 }
 
@@ -591,4 +595,47 @@ html {
   transition: transform 0.5s ease; /* Плавная анимация перехода */
   flex-wrap: nowrap;
   gap: 20px;
+}
+
+/* Счётчики  */
+
+.bullets {
+    display: flex;
+    gap: 6px; /* Отступ между кружками, можно настроить по необходимости */
+}
+
+.bullet {
+    width: 10px; /* Ширина кружка */
+    height: 10px; /* Высота кружка */
+    border-radius: 50%; /* Округление до формы кружка */
+    background-color: #D9D9D9; /* Цвет неактивного кружка */
+    cursor: pointer; /* Курсор в виде руки при наведении */
+    transition: background-color 0.3s ease; /* Плавное изменение цвета при активации */
+}
+
+/* Стили для активного кружка */
+.bullet.active {
+    background-color: #313131; /* Цвет активного кружка */
+}
+
+.carousel-button svg {
+    width: 10px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
+button.carousel-button.right svg {
+    position: relative;
+    left: 2px;
+}
+
+button.carousel-button.left svg {
+    position: relative;
+    right: 2px;
+}
+
+#members .carousel-buttons.desktop {
+    position: absolute;
+    right: 0;
+    top: -120px;
 }
