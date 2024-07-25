@@ -437,6 +437,7 @@ h4 {
   align-items: center;
   width: 394px;
   flex-shrink: 0;
+  max-width: 89vw;
 }
 
 #members .header-row {

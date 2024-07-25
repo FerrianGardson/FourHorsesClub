@@ -18,12 +18,12 @@
     />
   </head>
 
-<body>
+  <body>
     <header>
       <div class="content-wrap">
         <div class="logo">
-          <img src="img/logo.svg" alt="">
-          <span>Клуб<br>четырёх коней</span>
+          <img src="img/logo.svg" alt="" />
+          <span>Клуб<br />четырёх коней</span>
         </div>
         <div class="content">
           <h1>Превратите уездный город</h1>
@@ -31,12 +31,20 @@
           <h1 style="text-align: right">земного шара</h1>
 
           <p class="subheader">
-            Оплатите взнос на&nbsp;телеграммы для&nbsp;организации<br>Международного
+            Оплатите взнос на&nbsp;телеграммы для&nbsp;организации<br />Международного
             васюкинского турнира по&nbsp;шахматам
           </p>
           <div class="row" style="gap: 16px">
-            <button style="width: 263px; height: 72px; padding: 16px 40px" onclick="scrollToSection('support')">
-              Поддержать шахматную мысль</button><button style="width: 263px; height: 72px; padding: 14px 50px" onclick="scrollToSection('seans')" class="chameleon">
+            <button
+              style="width: 263px; height: 72px; padding: 16px 40px"
+              onclick="scrollToSection('support')"
+            >
+              Поддержать шахматную мысль</button
+            ><button
+              style="width: 263px; height: 72px; padding: 14px 50px"
+              onclick="scrollToSection('seans-info')"
+              class="chameleon"
+            >
               Подробнее о&nbsp;турнире
             </button>
           </div>
@@ -67,7 +75,7 @@
         <h3 class="mobile">
           Чтобы&nbsp;поддержать Международный васюкинский турнир
         </h3>
-        <img src="img/men.png">
+        <img src="img/men.png" />
         <h3 class="mobile">
           посетите лекцию на&nbsp;тему:
           <span class="red">«Плодотворная дебютная идея»</span>
@@ -76,11 +84,13 @@
     </section>
     <section id="seans">
       <div class="content-wrap">
-        <div class="overlay-wrap"><img src="img/seans.png" alt=""></div>
-        <div class="content" id="seans">
+        <div class="overlay-wrap"><img src="img/seans.png" alt="" /></div>
+        <div class="content" id="seans-info">
           <h3>
             и Сеанс
-            <span class="red">одновременной игры в&nbsp;шахматы на&nbsp;160&nbsp;досках</span>
+            <span class="red"
+              >одновременной игры в&nbsp;шахматы на&nbsp;160&nbsp;досках</span
+            >
             гроссмейстера О.&nbsp;Бендера
           </h3>
           <table class="desktop">
@@ -109,7 +119,7 @@
               </tr>
             </tbody>
           </table>
-          <p class="mihelson" style="">
+          <p class="mihelson">
             По&nbsp;всем вопросам обращаться в&nbsp;администрацию
             к&nbsp;К.&nbsp;Михельсону
           </p>
@@ -138,7 +148,10 @@
               небоскрёбов
             </div>
           </div>
-          <div class="stage" style="grid-column-start: 3; grid-row-start: 1; grid-row-end: 3">
+          <div
+            class="stage"
+            style="grid-column-start: 3; grid-row-start: 1; grid-row-end: 3"
+          >
             <div class="number">3</div>
             <div class="text">
               Поднятие сельского хозяйства в&nbsp;радиусе на&nbsp;тысячу
@@ -162,171 +175,238 @@
               сенсационных результатов
             </div>
           </div>
-          <div class="stage" style="grid-row-start: 3; grid-column-start: 2; grid-column-end: 4">
+          <div
+            class="stage"
+            style="grid-row-start: 3; grid-column-start: 2; grid-column-end: 4"
+          >
             <div class="number">7</div>
-            <div class="text" style="width: 446px">
+            <div class="text">
               Создание аэропорта «Большие Васюки» с&nbsp;регулярным отправлением
               почтовых самолётов и&nbsp;дирижаблей во&nbsp;все&nbsp;концы света,
               включая Лос-Анжелос и&nbsp;Мельбурн
             </div>
-            <img src="img\plane.png" style="position: absolute; right: -60px; bottom: 0">
+            <img
+              src="img\plane.png"
+              style="position: absolute; right: -60px; bottom: 0"
+            />
           </div>
         </div>
         <div class="carousel stages mobile">
-            <div class="carousel-buttons desktop">
-              <button class="carousel-button left">&lt;</button>
-              <div class="position">
-                <span class="current">5</span><span>/</span><span class="all">5</span>
-              </div>
-              <button class="carousel-button right" disabled="">&gt;</button>
-            </div><img class="plane" src="img\plane.png"><div class="row" style="transform: translateX(-80px);">
-                         <div class="card">
-            
-            <div class="block">
-              <div class="number">1</div>
-              <div class="text">
-                Строительство железнодорожной магистрали Москва-Васюки
-              </div>
+          <div class="carousel-buttons desktop">
+            <button class="carousel-button left" disabled="">&lt;</button>
+            <div class="position">
+              <span class="current">1</span><span>/</span
+              ><span class="all">5</span>
             </div>
-            <div class="block">
-              <div class="number">2</div>
-              <div class="text">
-                Открытие фешенебельной гостиницы «Проходная пешка» и&nbsp;других
-                небоскрёбов
-              </div>
-            </div>
+            <button class="carousel-button right">&gt;</button>
           </div>
-          <div class="card">
-            <div class="block">
-              <div class="number">3</div>
-              <div class="text">
-                Поднятие сельского хозяйства в&nbsp;радиусе на&nbsp;тысячу
-                километров: производство овощей, фруктов, икры, шоколадных
-                конфет
+          <img class="plane" src="img\plane.png" />
+          <div class="row" style="transform: translateX(0px)">
+            <div class="card">
+              <div class="block">
+                <div class="number">1</div>
+                <div class="text">
+                  Строительство железнодорожной магистрали Москва-Васюки
+                </div>
+              </div>
+              <div class="block">
+                <div class="number">2</div>
+                <div class="text">
+                  Открытие фешенебельной гостиницы «Проходная пешка»
+                  и&nbsp;других небоскрёбов
+                </div>
               </div>
             </div>
-          </div>
-          <div class="card">
-            <div class="block">
-              <div class="number">4</div>
-              <div class="text">Строительство дворца для&nbsp;турнира</div>
-            </div>
-            <div class="block">
-              <div class="number">5</div>
-              <div class="text">
-                Размещение гаражей для&nbsp;гостевого автотранспорта
+            <div class="card">
+              <div class="block">
+                <div class="number">3</div>
+                <div class="text">
+                  Поднятие сельского хозяйства в&nbsp;радиусе на&nbsp;тысячу
+                  километров: производство овощей, фруктов, икры, шоколадных
+                  конфет
+                </div>
               </div>
             </div>
-          </div>
-          <div class="card">
-            <div class="block">
-              <div class="number">6</div>
-              <div class="text">
-                Постройка сверхмощной радиостанции для&nbsp;передачи всему миру
-                сенсационных результатов
+            <div class="card">
+              <div class="block">
+                <div class="number">4</div>
+                <div class="text">Строительство дворца для&nbsp;турнира</div>
+              </div>
+              <div class="block">
+                <div class="number">5</div>
+                <div class="text">
+                  Размещение гаражей для&nbsp;гостевого автотранспорта
+                </div>
               </div>
             </div>
-          </div>
+            <div class="card">
+              <div class="block">
+                <div class="number">6</div>
+                <div class="text">
+                  Постройка сверхмощной радиостанции для&nbsp;передачи всему
+                  миру сенсационных результатов
+                </div>
+              </div>
+            </div>
 
-          <div class="card">
-            <div class="block">
-              <div class="number">7</div>
-              <div class="text">
-                Создание аэропорта «Большие Васюки» с&nbsp;регулярным
-                отправлением почтовых самолётов и&nbsp;дирижаблей
-                во&nbsp;все&nbsp;концы света, включая Лос-Анжелос
-                и&nbsp;Мельбурн
+            <div class="card">
+              <div class="block">
+                <div class="number">7</div>
+                <div class="text">
+                  Создание аэропорта «Большие Васюки» с&nbsp;регулярным
+                  отправлением почтовых самолётов и&nbsp;дирижаблей
+                  во&nbsp;все&nbsp;концы света, включая Лос-Анжелос
+                  и&nbsp;Мельбурн
+                </div>
               </div>
             </div>
-          </div></div>
-            <div class="carousel-buttons mobile">
-                <button class="carousel-button left"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="18" viewBox="0 0 10 18" fill="none">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M0.766114 8.99996L8.84627 17.0801L10.0034 15.923L3.08028 8.99996L10.0034 2.07688L8.84627 0.919799L0.766114 8.99996Z" fill="white"></path>
-</svg></button>
-                  <div class="position">
-            <div class="bullets"><div class="bullet" style="width: 10px; height: 10px; border-radius: 50%; background-color: rgb(217, 217, 217); display: inline-block; margin: 0px 2px; cursor: pointer;"></div><div class="bullet" style="width: 10px; height: 10px; border-radius: 50%; background-color: rgb(217, 217, 217); display: inline-block; margin: 0px 2px; cursor: pointer;"></div><div class="bullet" style="width: 10px; height: 10px; border-radius: 50%; background-color: rgb(217, 217, 217); display: inline-block; margin: 0px 2px; cursor: pointer;"></div><div class="bullet" style="width: 10px; height: 10px; border-radius: 50%; background-color: rgb(217, 217, 217); display: inline-block; margin: 0px 2px; cursor: pointer;"></div><div class="bullet" style="width: 10px; height: 10px; border-radius: 50%; background-color: rgb(49, 49, 49); display: inline-block; margin: 0px 2px; cursor: pointer;"></div></div>
-        </div>
-                <button class="carousel-button right">
-    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="18" viewBox="0 0 10 18" fill="none">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.0034 8.99996L1.92326 17.0801L0.766174 15.923L7.68925 8.99996L0.766174 2.07688L1.92326 0.919799L10.0034 8.99996Z" fill="white"></path>
-    </svg>
-</button>
-
+          </div>
+          <div class="carousel-buttons mobile">
+            <button class="carousel-button left" disabled="">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="10"
+                height="18"
+                viewBox="0 0 10 18"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M0.766114 8.99996L8.84627 17.0801L10.0034 15.923L3.08028 8.99996L10.0034 2.07688L8.84627 0.919799L0.766114 8.99996Z"
+                  fill="white"
+                ></path>
+              </svg>
+            </button>
+            <div class="position">
+              <div class="bullets">
+                <div
+                  class="bullet"></div>
+                <div
+                  class="bullet"></div>
+                <div
+                  class="bullet"></div>
+                <div
+                  class="bullet"></div>
+                <div
+                  class="bullet"></div>
+              </div>
             </div>
+            <button class="carousel-button right">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="10"
+                height="18"
+                viewBox="0 0 10 18"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M10.0034 8.99996L1.92326 17.0801L0.766174 15.923L7.68925 8.99996L0.766174 2.07688L1.92326 0.919799L10.0034 8.99996Z"
+                  fill="white"
+                ></path>
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
     </section>
     <section id="members">
-        <div class="content-wrap">
-          <div class="header-row">
-            <h2>Участники турнира</h2>
-            
-          </div>
-          <div class="carousel members cycled">
-            <div class="carousel-buttons desktop">
-              <button class="carousel-button left">&lt;</button>
-              <div class="position">
-                <span class="current">6</span><span>/</span><span class="all">6</span>
-              </div>
-              <button class="carousel-button right" disabled="">&gt;</button>
-            </div><div class="row" style="transform: translateX(-1242px);">
-                <div class="card">
-                  <img src="img/portrait.png">
-                  <h4>Хозе-Рауль Капабланка</h4>
-                  <p>Чемпион мира по шахматам</p>
-                  <button class="about">Подробнее</button>
-                </div>
-                <div class="card">
-                  <img src="img/portrait.png">
-                  <h4>Эммануил Ласкер</h4>
-                  <p>Чемпион мира по шахматам</p>
-                  <button class="about">Подробнее</button>
-                </div>
-                <div class="card">
-                  <img src="img/portrait.png">
-                  <h4>Александр Алехин</h4>
-                  <p>Чемпион мира по шахматам</p>
-                  <button class="about">Подробнее</button>
-                </div>
-                <div class="card">
-                  <img src="img/portrait.png">
-                  <h4>Арон Нимцович</h4>
-                  <p>Чемпион мира по шахматам</p>
-                  <button class="about">Подробнее</button>
-                </div>
-                <div class="card">
-                  <img src="img/portrait.png">
-                  <h4>Рихард Рети</h4>
-                  <p>Чемпион мира по шахматам</p>
-                  <button class="about">Подробнее</button>
-                </div>
-                <div class="card">
-                  <img src="img/portrait.png">
-                  <h4>Остап Бендер</h4>
-                  <p>Гроссмейстер</p>
-                  <button class="about">Подробнее</button>
-                </div>
-              </div>
-            <div class="carousel-buttons mobile">
-                <button class="carousel-button left"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="18" viewBox="0 0 10 18" fill="none">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M0.766114 8.99996L8.84627 17.0801L10.0034 15.923L3.08028 8.99996L10.0034 2.07688L8.84627 0.919799L0.766114 8.99996Z" fill="white"></path>
-</svg></button>
-                        <div class="position">
-            <div class="numbers"><span class="current">4</span><span>/</span><span class="all">6</span></div>
+      <div class="content-wrap">
+        <div class="header-row">
+          <h2>Участники турнира</h2>
         </div>
-                <button class="carousel-button right" disabled="">
-    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="18" viewBox="0 0 10 18" fill="none">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.0034 8.99996L1.92326 17.0801L0.766174 15.923L7.68925 8.99996L0.766174 2.07688L1.92326 0.919799L10.0034 8.99996Z" fill="white"></path>
-    </svg>
-</button>
+        <div class="carousel members cycled">
+          <div class="carousel-buttons desktop">
+            <button class="carousel-button left" disabled="">&lt;</button>
+            <div class="position">
+              <span class="current">3</span><span>/</span
+              ><span class="all">6</span>
             </div>
+            <button class="carousel-button right">&gt;</button>
+          </div>
+          <div class="row" style="transform: translateX(0px)">
+            <div class="card">
+              <img src="img/portrait.png" />
+              <h4>Хозе-Рауль Капабланка</h4>
+              <p>Чемпион мира по шахматам</p>
+              <button class="about">Подробнее</button>
+            </div>
+            <div class="card">
+              <img src="img/portrait.png" />
+              <h4>Эммануил Ласкер</h4>
+              <p>Чемпион мира по шахматам</p>
+              <button class="about">Подробнее</button>
+            </div>
+            <div class="card">
+              <img src="img/portrait.png" />
+              <h4>Александр Алехин</h4>
+              <p>Чемпион мира по шахматам</p>
+              <button class="about">Подробнее</button>
+            </div>
+            <div class="card">
+              <img src="img/portrait.png" />
+              <h4>Арон Нимцович</h4>
+              <p>Чемпион мира по шахматам</p>
+              <button class="about">Подробнее</button>
+            </div>
+            <div class="card">
+              <img src="img/portrait.png" />
+              <h4>Рихард Рети</h4>
+              <p>Чемпион мира по шахматам</p>
+              <button class="about">Подробнее</button>
+            </div>
+            <div class="card">
+              <img src="img/portrait.png" />
+              <h4>Остап Бендер</h4>
+              <p>Гроссмейстер</p>
+              <button class="about">Подробнее</button>
+            </div>
+          </div>
+          <div class="carousel-buttons mobile">
+            <button class="carousel-button left" disabled="">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="10"
+                height="18"
+                viewBox="0 0 10 18"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M0.766114 8.99996L8.84627 17.0801L10.0034 15.923L3.08028 8.99996L10.0034 2.07688L8.84627 0.919799L0.766114 8.99996Z"
+                  fill="white"
+                ></path>
+              </svg>
+            </button>
+            <div class="position">
+              <div class="numbers">
+                <span class="current">1</span><span>/</span
+                ><span class="all">6</span>
+              </div>
+            </div>
+            <button class="carousel-button right">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="10"
+                height="18"
+                viewBox="0 0 10 18"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M10.0034 8.99996L1.92326 17.0801L0.766174 15.923L7.68925 8.99996L0.766174 2.07688L1.92326 0.919799L10.0034 8.99996Z"
+                  fill="white"
+                ></path>
+              </svg>
+            </button>
+          </div>
         </div>
-        
-
-        
-          
-        </div>
-      </section>
+      </div>
+    </section>
     <section class="running-line-wrap">
       <div class="running-line">
         <span>Дело помощи утопающим — дело рук самих утопающих!</span>
@@ -354,27 +434,20 @@
     </footer>
 
     <script src="script.js"></script>
-    <script>function scrollToSection(id) {
-        console.log('Скроллю');
+    <script>
+      function scrollToSection(id) {
+        console.log("Скроллю");
         var element = document.getElementById(id);
         var elementRect = element.getBoundingClientRect();
         var absoluteElementTop = elementRect.top + window.pageYOffset;
-        var middle = absoluteElementTop - (window.innerHeight / 2) + (elementRect.height / 2);
-      
+        var middle =
+          absoluteElementTop - window.innerHeight / 2 + elementRect.height / 2;
+
         window.scrollTo({
-            top: middle,
-            behavior: 'smooth'
+          top: middle,
+          behavior: "smooth",
         });
-      }</script>
-  
-
-
-
-
-
-
-
-
-
-</body>
+      }
+    </script>
+  </body>
 </html>
