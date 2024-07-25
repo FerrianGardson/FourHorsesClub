@@ -87,6 +87,7 @@ h3 {
   text-transform: uppercase;
   font-size: 60px;
   line-height: 110%;
+  margin: 0;
 }
 
 h2 {
@@ -109,7 +110,7 @@ header {
   background-image: url("img/header-pic.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover, auto;
+  background-size: cover;
   height: 700px;
   padding-top: 26px;
   padding-left: 72px;
@@ -138,11 +139,11 @@ header::before {
 }
 
 #seans img {
-  position: relative;
-  width: 474px;
-  height: 527px;
-  scale: 110%;
-  top: -3px;
+  /* position: relative; */
+  max-width: 474px;
+  /* height: 527px; */
+  /* scale: 110%; */
+  /* top: -3px; */
 }
 
 .overlay-wrap {
@@ -153,6 +154,7 @@ header::before {
 
 header .content {
   width: 542px;
+  max-width: 100%;
 }
 
 .content h1 {
@@ -270,9 +272,6 @@ section.running-line-wrap {
   flex-wrap: wrap;
 }
 
-#support h2 {
-  /* max-width: 764px; */
-}
 
 span.red {
   color: #f54932;
@@ -287,21 +286,22 @@ span.red {
 }
 
 #support h3 {
-  max-width: 764px;
+  max-width: 100%;
+  width: 764px;
   margin: auto;
 }
 
 img {
   width: fit-content;
   height: fit-content;
+  max-width: 100%;
 }
 
 #seans .content {
   max-width: 704px;
 }
 
-.carousel .row {
-}
+
 
 /* Таблица */
 
@@ -364,9 +364,7 @@ span.crossed::after {
   position: relative;
 }
 
-section:last-of-type {
-  /* margin-bottom: 240px; */
-}
+
 
 .number {
   width: 36px;
@@ -388,12 +386,7 @@ section:last-of-type {
   margin-top: -32px;
 }
 
-section {
-  margin: 100px 0;
-  padding: 0 20px;
-  /* margin-top: 80px; */
-  /* margin-bottom: 64px; */
-}
+
 
 #support {
   margin-top: 80px;
@@ -401,7 +394,8 @@ section {
 }
 
 #seans {
-  margin-top: 0;
+  /* margin-top: 0; */
+  margin-bottom: 200px;
 }
 
 h3 {
@@ -455,7 +449,7 @@ h4 {
 
 .carousel {
   display: flex;
-  gap: 20px;
+  column-gap: 20px;
   /* overflow: hidden; */
   flex-direction: column;
   position: relative;
@@ -581,14 +575,14 @@ img.plane {
   color: #3057a2;
   width: 280px;
   position: relative;
-  top: -76px;
+  top: -84px;
   left: 302px;
 }
 
 #stages h2 {
   width: 806px;
   margin: 0;
-  line-height: 120%;
+  /* line-height: 120%; */
 }
 
 #seans h3 {
@@ -657,5 +651,6 @@ header .content-wrap {
 }
 
 section#stages {
-    margin-top: 79px;
+    /* margin-top: 79px; */
+    margin-bottom: 200px;
 }
