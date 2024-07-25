@@ -1,132 +1,150 @@
 @media (max-width: 375px) {
-  div {
-    max-width: 335px;
+    div {
+      max-width: 335px;
+    }
+    h2 {
+      font-size: 36px;
+      line-height: 110%;
+    }
+    h3 {
+      font-size: 28px;
+    }
+    .desktop {
+      display: none;
+    }
+    .mobile {
+      display: block;
+    }
+    img {
+      width: 335px !important;
+      height: auto !important;
+    }
+    p.mihelson {
+      padding-left: 0;
+    }
+    section.support {
+      margin-top: 0px;
+      margin-bottom: 0;
+    }
+  
+    section.support > div {
+      margin-top: 48px;
+      margin-bottom: 34px;
+    }
+  
+    .content-wrap {
+      max-width: 375px;
+    }
+  
+    .carousel-buttons.mobile {
+      display: flex;
+      width: 150px;
+      margin: auto;
+      margin-top: 40px;
+    }
+  
+    #members .header-row {
+      margin-bottom: 40px;
+    }
+  
+    .logo img {
+      width: 80px !important;
+    }
+  
+    .logo span {
+      font-size: 14px;
+    }
+  
+    h1 {
+      font-size: 36px;
+      line-height: 110%;
+    }
+  
+    section.header {
+      padding: 20px;
+    }
+  
+    .header button {
+      width: 100%;
+      padding: 18px 20px;
+    }
+  
+    button.chameleon {
+      background: white;
+      border: none;
+      opacity: 90%;
+    }
+  
+    p.subheader {
+      text-align: left;
+      margin-bottom: 32px;
+    }
+  
+    footer {
+      line-height: 120%;
+      padding: 40px 20px 60px 20px;
+    }
+  
+    button.chameleon:hover {
+      background: #fbce51;
+      color: inherit;
+    }
+    .stage-grid.mobile {
+      display: flex;
+      margin-top: 148px;
+    }
+    img.plane {
+      top: -140px;
+      left: 0;
+    }
+  
+    .stages .card {
+      padding: 34px 24px;
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+      padding-top: 62px;
+    }
+  
+    .stages .block {
+      width: 100%;
+      display: flex;
+      column-gap: 16px;
+    }
+  
+    div.text {
+      width: 100%;
+    }
+  
+    p.stages-subheader {
+      margin-left: 0;
+      display: block;
+      margin-top: 12px;
+      width: auto;
+      position: initial;
+    }
+  
+    .stages h2 {
+      width: auto;
+      margin: 0;
+    }
+  
+  .carousel.stages {
+      margin-top: 150px;
   }
-  h2 {
-    font-size: 36px;
-    line-height: 110%;
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
   }
-  h3 {
-    font-size: 28px;
-  }
-  .desktop {
-    display: none;
-  }
-  .mobile {
-    display: block;
-  }
-  img {
-    width: 335px !important;
-    height: auto !important;
-  }
-  p.mihelson {
-    padding-left: 0;
-  }
-  section.support {
-    margin-top: 0px;
-    margin-bottom: 0;
-  }
-
-  section.support > div {
-    margin-top: 48px;
-    margin-bottom: 34px;
-  }
-
-  section > div,
-  footer > div,
-  header > div {
-    max-width: 375px;
-  }
-
-  .carousel-buttons.mobile {
-    display: flex;
-    width: 150px;
-    margin: auto;
-    margin-top: 40px;
-  }
-
-  .members .header-row {
-    margin-bottom: 40px;
-  }
-
-  .logo img {
-    width: 80px !important;
-  }
-
-  .logo span {
-    font-size: 14px;
-  }
-
-  h1 {
-    font-size: 36px;
-    line-height: 110%;
-  }
-
-  section.header {
-    padding: 20px;
-  }
-
-  .header button {
-    width: 100%;
-    padding: 18px 20px;
-  }
-
-  button.chameleon {
-    background: white;
-    border: none;
-    opacity: 90%;
-  }
-
-  p.subheader {
-    text-align: left;
-    margin-bottom: 32px;
-  }
-
-  footer {
-    line-height: 120%;
-    padding: 40px 20px 60px 20px;
-  }
-
-  button.chameleon:hover {
-    background: #fbce51;
-    color: inherit;
-  }
-  .stage-grid.mobile {
-    display: flex;
-    margin-top: 148px;
-  }
-  img.plane {
-    top: -150px;
-    left: 0;
-  }
-
-  .stage {
-    padding: 34px 24px;
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-  }
-
-  .block {
-    width: 100%;
-    display: flex;
-    column-gap: 16px;
-  }
-
-  div.text {
-    width: 100%;
-  }
-
-  p.stages-subheader {
-    margin-left: 0;
-    display: block;
-    margin-top: 12px;
-    width: auto;
-    position: initial;
-  }
-
-  .stages h2 {
-    width: auto;
-    margin: 0;
-  }
-}

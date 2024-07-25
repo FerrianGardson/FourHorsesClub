@@ -20,7 +20,7 @@
 
   <body>
     <section class="header">
-      <div>
+      <div class="content-wrap">
         <div class="logo">
           <img src="img/logo.svg" alt="">
           <span>Клуб<br>четырёх коней</span>
@@ -59,7 +59,7 @@
       </div>
     </section>
     <section class="support" id="support">
-      <div>
+      <div class="content-wrap">
         <h3 class="desktop">
           Чтобы&nbsp;поддержать Международный васюкинский турнир посетите лекцию
           на&nbsp;тему: <span class="red">«Плодотворная дебютная идея»</span>
@@ -75,7 +75,7 @@
       </div>
     </section>
     <section class="seans">
-      <div>
+      <div class="content-wrap">
         <div class="overlay-wrap"><img src="img/seans.png" alt=""></div>
         <div class="content" id="seans">
           <h3>
@@ -117,7 +117,7 @@
       </div>
     </section>
     <section class="stages">
-      <div>
+      <div class="content-wrap">
         <div>
           <h2>Этапы преображения Васюков</h2>
           <p class="stages-subheader">
@@ -172,9 +172,16 @@
             <img src="img\plane.png" style="position: absolute; right: -60px; bottom: 0">
           </div>
         </div>
-        <div class="stage-grid mobile">
-          <div class="stage">
-            <img class="plane" src="img\plane.png">
+        <div class="carousel stages mobile">
+            <div class="carousel-buttons desktop">
+              <button class="carousel-button left" disabled="">&lt;</button>
+              <div class="position">
+                <span class="current">1</span><span>/</span><span class="all">5</span>
+              </div>
+              <button class="carousel-button right">&gt;</button>
+            </div><img class="plane" src="img\plane.png"><div class="row" style="transform: translateX(0px);">
+                         <div class="card">
+            
             <div class="block">
               <div class="number">1</div>
               <div class="text">
@@ -189,7 +196,7 @@
               </div>
             </div>
           </div>
-          <div class="stage">
+          <div class="card">
             <div class="block">
               <div class="number">3</div>
               <div class="text">
@@ -199,7 +206,7 @@
               </div>
             </div>
           </div>
-          <div class="stage">
+          <div class="card">
             <div class="block">
               <div class="number">4</div>
               <div class="text">Строительство дворца для&nbsp;турнира</div>
@@ -211,7 +218,7 @@
               </div>
             </div>
           </div>
-          <div class="stage">
+          <div class="card">
             <div class="block">
               <div class="number">6</div>
               <div class="text">
@@ -221,7 +228,7 @@
             </div>
           </div>
 
-          <div class="stage">
+          <div class="card">
             <div class="block">
               <div class="number">7</div>
               <div class="text">
@@ -231,71 +238,82 @@
                 и&nbsp;Мельбурн
               </div>
             </div>
-          </div>
+          </div></div>
+            <div class="carousel-buttons mobile">
+                <button class="carousel-button left" disabled="">&lt;</button>
+                <div class="position bullets">
+                    <span class="current">1</span><span>/</span><span class="all">5</span>
+                </div>
+                <button class="carousel-button right">&gt;</button>
+            </div>
         </div>
       </div>
     </section>
-    <section class="members">
-      <div>
-        <div class="header-row">
-          <h2 style="">Участники турнира</h2>
-          <div class="carousel-buttons desktop">
-            <button class="carousel-button left">&lt;</button>
-            <div class="position">
-              <span class="current">2</span><span>/</span><span class="all">6</span>
-            </div>
-            <button class="carousel-button right">&gt;</button>
+    <section id="members">
+        <div class="content-wrap">
+          <div class="header-row">
+            <h2>Участники турнира</h2>
+            
           </div>
+          <div class="carousel members cycled">
+            <div class="carousel-buttons desktop">
+              <button class="carousel-button left">&lt;</button>
+              <div class="position">
+                <span class="current">3</span><span>/</span><span class="all">6</span>
+              </div>
+              <button class="carousel-button right">&gt;</button>
+            </div><div class="row" style="transform: translateX(-710px);">
+                <div class="card">
+                  <img src="img/portrait.png">
+                  <h4>Хозе-Рауль Капабланка</h4>
+                  <p>Чемпион мира по шахматам</p>
+                  <button class="about">Подробнее</button>
+                </div>
+                <div class="card">
+                  <img src="img/portrait.png">
+                  <h4>Эммануил Ласкер</h4>
+                  <p>Чемпион мира по шахматам</p>
+                  <button class="about">Подробнее</button>
+                </div>
+                <div class="card">
+                  <img src="img/portrait.png">
+                  <h4>Александр Алехин</h4>
+                  <p>Чемпион мира по шахматам</p>
+                  <button class="about">Подробнее</button>
+                </div>
+                <div class="card">
+                  <img src="img/portrait.png">
+                  <h4>Арон Нимцович</h4>
+                  <p>Чемпион мира по шахматам</p>
+                  <button class="about">Подробнее</button>
+                </div>
+                <div class="card">
+                  <img src="img/portrait.png">
+                  <h4>Рихард Рети</h4>
+                  <p>Чемпион мира по шахматам</p>
+                  <button class="about">Подробнее</button>
+                </div>
+                <div class="card">
+                  <img src="img/portrait.png">
+                  <h4>Остап Бендер</h4>
+                  <p>Гроссмейстер</p>
+                  <button class="about">Подробнее</button>
+                </div>
+              </div>
+            <div class="carousel-buttons mobile">
+                <button class="carousel-button left">&lt;</button>
+                <div class="position numbers">
+                    <span class="current">3</span><span>/</span><span class="all">6</span>
+                </div>
+                <button class="carousel-button right">&gt;</button>
+            </div>
         </div>
-        <div class="carousel">
-          <div class="row" style="transform: translateX(-355px);">
-            <div class="member">
-              <img src="img/portrait.png">
-              <h4>Хозе-Рауль Капабланка</h4>
-              <p>Чемпион мира по шахматам</p>
-              <button class="about">Подробнее</button>
-            </div>
-            <div class="member">
-              <img src="img/portrait.png">
-              <h4>Эммануил Ласкер</h4>
-              <p>Чемпион мира по шахматам</p>
-              <button class="about">Подробнее</button>
-            </div>
-            <div class="member">
-              <img src="img/portrait.png">
-              <h4>Александр Алехин</h4>
-              <p>Чемпион мира по шахматам</p>
-              <button class="about">Подробнее</button>
-            </div>
-            <div class="member">
-              <img src="img/portrait.png">
-              <h4>Арон Нимцович</h4>
-              <p>Чемпион мира по шахматам</p>
-              <button class="about">Подробнее</button>
-            </div>
-            <div class="member">
-              <img src="img/portrait.png">
-              <h4>Рихард Рети</h4>
-              <p>Чемпион мира по шахматам</p>
-              <button class="about">Подробнее</button>
-            </div>
-            <div class="member">
-              <img src="img/portrait.png">
-              <h4>Остап Бендер</h4>
-              <p>Гроссмейстер</p>
-              <button class="about">Подробнее</button>
-            </div>
-          </div>
+        
+
+        
+          
         </div>
-        <div class="carousel-buttons mobile">
-          <button class="carousel-button left">&lt;</button>
-          <div class="position">
-            <span class="current">2</span><span>/</span><span class="all">6</span>
-          </div>
-          <button class="carousel-button right">&gt;</button>
-        </div>
-      </div>
-    </section>
+      </section>
     <section class="running-line-wrap">
       <div class="running-line">
         <span>Дело помощи утопающим — дело рук самих утопающих!</span>
@@ -312,7 +330,7 @@
       </div>
     </section>
     <footer>
-      <div>
+      <div class="content-wrap">
         <p>
           Все&nbsp;персонажи, события и&nbsp;цитаты являются вымышленными
           и&nbsp;не&nbsp;принадлежат создателям сайта. С&nbsp;подробностями
@@ -336,6 +354,12 @@
         });
       }</script>
   
+
+
+
+
+
+
 
 </body>
 </html>
