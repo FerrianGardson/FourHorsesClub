@@ -101,7 +101,7 @@ h2 {
   line-height: 130%;
   text-align: center;
   margin-top: 24px;
-  margin-bottom: 40px;
+  margin-bottom: 37px;
 }
 
 header {
@@ -142,7 +142,7 @@ header::before {
   width: 474px;
   height: 527px;
   scale: 110%;
-  top: 0;
+  top: -3px;
 }
 
 .overlay-wrap {
@@ -288,7 +288,7 @@ span.red {
 
 #support h3 {
   max-width: 764px;
-  margin: 0;
+  margin: auto;
 }
 
 img {
@@ -306,7 +306,7 @@ img {
 /* Таблица */
 
 td {
-  padding: 16px;
+  padding: 15px 16px;
   border-bottom: 2px solid #d0d0d0;
 }
 
@@ -314,6 +314,8 @@ td {
 tbody td:nth-child(1) {
   opacity: 0.7; /* Полупрозрачность 70% */
   border-right: 2px solid #d0d0d0;
+  padding-left: 0;
+  width: 306px;
 }
 
 /* Стили для второй ячейки в каждой строке */
@@ -321,9 +323,10 @@ tbody td:nth-child(2) {
   font-weight: bold; /* Жирный шрифт */
 }
 
-table {
+#seans table {
   width: 100%;
   border-collapse: collapse; /* Объединяет границы ячеек в одну линию */
+  margin-bottom: 34px;
 }
 
 tr:last-child td {
@@ -382,6 +385,7 @@ section:last-of-type {
   display: grid;
   grid-template-columns: 394px 394px 394px;
   grid-template-rows: 112px 112px 136px;
+  margin-top: -32px;
 }
 
 section {
@@ -411,7 +415,7 @@ button.about {
   background: none;
   color: #3057a2;
   border: 1px solid #3057a2;
-  padding: 12px;
+  padding: 5px 13px;
   font-weight: 600;
 }
 
@@ -445,7 +449,7 @@ h4 {
   gap: 20px;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 60px;
+  margin-bottom: 56px;
   flex-wrap: wrap;
 }
 
@@ -513,6 +517,8 @@ footer {
 
 footer p {
   opacity: 60%;
+  margin: 0;
+  line-height: 130%;
 }
 
 #members {
@@ -557,7 +563,7 @@ header::before {
 }
 p.mihelson {
   color: #3057a2;
-  padding-left: 16px;
+  /* padding-left: 16px; */
 }
 
 section.running-line-wrap > div {
@@ -571,20 +577,23 @@ img.plane {
   z-index: 1;
 }
 
-p.stages-subheader {
+.stages-subheader {
   color: #3057a2;
   width: 280px;
   position: relative;
-  top: -109px;
-  left: 290px;
+  top: -76px;
+  left: 302px;
 }
 
 #stages h2 {
   width: 806px;
+  margin: 0;
+  line-height: 120%;
 }
 
 #seans h3 {
     margin-top: 0;
+    margin-bottom: 45px;
 }
 
 html {
@@ -638,4 +647,15 @@ button.carousel-button.left svg {
     position: absolute;
     right: 0;
     top: -120px;
+}
+
+/* Pixel Perfect */
+
+header .content-wrap {
+    max-width: 1366px;
+    padding-left: 60px;
+}
+
+section#stages {
+    margin-top: 79px;
 }

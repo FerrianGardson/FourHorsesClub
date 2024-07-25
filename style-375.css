@@ -124,7 +124,7 @@
       position: initial;
     }
   
-    .stages h2 {
+    #stages h2 {
       width: auto;
       margin: 0;
     }
