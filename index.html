@@ -2,7 +2,10 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=320, initial-scale=1, shrink-to-fit=no">
+    <meta
+      name="viewport"
+      content="width=320, initial-scale=1, shrink-to-fit=no"
+    />
     <title>Основная HTML-страница</title>
     <link rel="stylesheet" href="style-1366.css" />
     <link rel="stylesheet" href="style-375.css" />
@@ -17,26 +20,29 @@
 
   <body>
     <section class="header">
-        <div>
-          <div class="logo">
-            <img src="img/logo.svg" alt="">
-            <span>Клуб<br>четырёх коней</span>
-          </div>
-          <div class="content">
-            <h1>Превратите уездный город</h1>
-            <h1 style="text-align: center">в&nbsp;столицу</h1>
-            <h1 style="text-align: right">земного шара</h1>
-  
-            <p class="subheader">
-              Оплатите взнос на&nbsp;телеграммы для&nbsp;организации<br>Международного
-              васюкинского турнира по&nbsp;шахматам
-            </p>
-            <div class="row" style="gap: 16px">
-              <button style="width:263px;height: 72px;padding: 16px 40px;" onclick="location.href='#support'">Поддержать шахматную мысль</button><button style="width:263px;height: 72px;padding: 14px 50px;" onclick="location.href='#seans'" class="chameleon">Подробнее о&nbsp;турнире</button>
-            </div>
+      <div>
+        <div class="logo">
+          <img src="img/logo.svg" alt="">
+          <span>Клуб<br>четырёх коней</span>
+        </div>
+        <div class="content">
+          <h1>Превратите уездный город</h1>
+          <h1 style="text-align: center">в&nbsp;столицу</h1>
+          <h1 style="text-align: right">земного шара</h1>
+
+          <p class="subheader">
+            Оплатите взнос на&nbsp;телеграммы для&nbsp;организации<br>Международного
+            васюкинского турнира по&nbsp;шахматам
+          </p>
+          <div class="row" style="gap: 16px">
+            <button style="width: 263px; height: 72px; padding: 16px 40px" onclick="scrollToSection('support')">
+              Поддержать шахматную мысль</button><button style="width: 263px; height: 72px; padding: 14px 50px" onclick="scrollToSection('seans')" class="chameleon">
+              Подробнее о&nbsp;турнире
+            </button>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
     <section class="running-line-wrap">
       <div class="running-line">
         <span>Дело помощи утопающим — дело рук самих утопающих!</span>
@@ -52,7 +58,7 @@
         <span>Лед тронулся, господа присяжные заседатели!</span>
       </div>
     </section>
-    <section class="support">
+    <section class="support" id="support">
       <div>
         <h3 class="desktop">
           Чтобы&nbsp;поддержать Международный васюкинский турнир посетите лекцию
@@ -61,7 +67,7 @@
         <h3 class="mobile">
           Чтобы&nbsp;поддержать Международный васюкинский турнир
         </h3>
-        <img src="img/men.png" />
+        <img src="img/men.png">
         <h3 class="mobile">
           посетите лекцию на&nbsp;тему:
           <span class="red">«Плодотворная дебютная идея»</span>
@@ -70,13 +76,11 @@
     </section>
     <section class="seans">
       <div>
-        <div class="overlay-wrap"><img src="img/seans.png" alt="" /></div>
-        <div class="content">
+        <div class="overlay-wrap"><img src="img/seans.png" alt=""></div>
+        <div class="content" id="seans">
           <h3>
             и Сеанс
-            <span class="red"
-              >одновременной игры в&nbsp;шахматы на&nbsp;160&nbsp;досках</span
-            >
+            <span class="red">одновременной игры в&nbsp;шахматы на&nbsp;160&nbsp;досках</span>
             гроссмейстера О.&nbsp;Бендера
           </h3>
           <table class="desktop">
@@ -113,166 +117,170 @@
       </div>
     </section>
     <section class="stages">
+      <div>
         <div>
-          <div>
-            <h2>Этапы преображения Васюков</h2>
-            <p class="stages-subheader">
-              Будущие источники обогащения васюкинцев
-            </p>
+          <h2>Этапы преображения Васюков</h2>
+          <p class="stages-subheader">
+            Будущие источники обогащения васюкинцев
+          </p>
+        </div>
+        <div class="stage-grid desktop">
+          <div class="stage">
+            <div class="number">1</div>
+            <div class="text">
+              Строительство железнодорожной магистрали Москва-Васюки
+            </div>
           </div>
-          <div class="stage-grid desktop">
-            <div class="stage">
+          <div class="stage">
+            <div class="number">2</div>
+            <div class="text">
+              Открытие фешенебельной гостиницы «Проходная пешка» и&nbsp;других
+              небоскрёбов
+            </div>
+          </div>
+          <div class="stage" style="grid-column-start: 3; grid-row-start: 1; grid-row-end: 3">
+            <div class="number">3</div>
+            <div class="text">
+              Поднятие сельского хозяйства в&nbsp;радиусе на&nbsp;тысячу
+              километров: производство овощей, фруктов, икры, шоколадных конфет
+            </div>
+          </div>
+          <div class="stage" style="grid-row-start: 2">
+            <div class="number">4</div>
+            <div class="text">Строительство дворца для&nbsp;турнира</div>
+          </div>
+          <div class="stage" style="grid-row-start: 2">
+            <div class="number">5</div>
+            <div class="text">
+              Размещение гаражей для&nbsp;гостевого автотранспорта
+            </div>
+          </div>
+          <div class="stage" style="grid-row-start: 3">
+            <div class="number">6</div>
+            <div class="text">
+              Постройка сверхмощной радиостанции для&nbsp;передачи всему миру
+              сенсационных результатов
+            </div>
+          </div>
+          <div class="stage" style="grid-row-start: 3; grid-column-start: 2; grid-column-end: 4">
+            <div class="number">7</div>
+            <div class="text" style="width: 446px">
+              Создание аэропорта «Большие Васюки» с&nbsp;регулярным отправлением
+              почтовых самолётов и&nbsp;дирижаблей во&nbsp;все&nbsp;концы света,
+              включая Лос-Анжелос и&nbsp;Мельбурн
+            </div>
+            <img src="img\plane.png" style="position: absolute; right: -60px; bottom: 0">
+          </div>
+        </div>
+        <div class="stage-grid mobile">
+          <div class="stage">
+            <img class="plane" src="img\plane.png">
+            <div class="block">
               <div class="number">1</div>
               <div class="text">
                 Строительство железнодорожной магистрали Москва-Васюки
               </div>
             </div>
-            <div class="stage">
+            <div class="block">
               <div class="number">2</div>
               <div class="text">
                 Открытие фешенебельной гостиницы «Проходная пешка» и&nbsp;других
                 небоскрёбов
               </div>
             </div>
-            <div class="stage" style="grid-column-start: 3; grid-row-start: 1; grid-row-end: 3">
+          </div>
+          <div class="stage">
+            <div class="block">
               <div class="number">3</div>
               <div class="text">
                 Поднятие сельского хозяйства в&nbsp;радиусе на&nbsp;тысячу
-                километров: производство овощей, фруктов, икры, шоколадных конфет
+                километров: производство овощей, фруктов, икры, шоколадных
+                конфет
               </div>
             </div>
-            <div class="stage" style="grid-row-start: 2">
+          </div>
+          <div class="stage">
+            <div class="block">
               <div class="number">4</div>
               <div class="text">Строительство дворца для&nbsp;турнира</div>
             </div>
-            <div class="stage" style="grid-row-start: 2">
+            <div class="block">
               <div class="number">5</div>
               <div class="text">
                 Размещение гаражей для&nbsp;гостевого автотранспорта
               </div>
             </div>
-            <div class="stage" style="grid-row-start: 3">
+          </div>
+          <div class="stage">
+            <div class="block">
               <div class="number">6</div>
               <div class="text">
                 Постройка сверхмощной радиостанции для&nbsp;передачи всему миру
                 сенсационных результатов
               </div>
             </div>
-            <div class="stage" style="grid-row-start: 3; grid-column-start: 2; grid-column-end: 4">
+          </div>
+
+          <div class="stage">
+            <div class="block">
               <div class="number">7</div>
-              <div class="text" style="width: 446px">
-                Создание аэропорта «Большие Васюки» с&nbsp;регулярным отправлением
-                почтовых самолётов и&nbsp;дирижаблей во&nbsp;все&nbsp;концы света,
-                включая Лос-Анжелос и&nbsp;Мельбурн
+              <div class="text">
+                Создание аэропорта «Большие Васюки» с&nbsp;регулярным
+                отправлением почтовых самолётов и&nbsp;дирижаблей
+                во&nbsp;все&nbsp;концы света, включая Лос-Анжелос
+                и&nbsp;Мельбурн
               </div>
-              <img src="img\plane.png" style="position: absolute; right: -60px; bottom: 0">
             </div>
           </div>
-          <div class="stage-grid mobile">
-              <div class="stage">
-                  <img class="plane" src="img\plane.png">
-                  <div class="block">
-                      <div class="number">1</div>
-                      <div class="text">
-                          Строительство железнодорожной магистрали Москва-Васюки
-                      </div>
-                  </div>
-                  <div class="block">
-                      <div class="number">2</div>
-                      <div class="text">
-                          Открытие фешенебельной гостиницы «Проходная пешка» и&nbsp;других
-                          небоскрёбов
-                      </div>
-                  </div>
-              </div>
-              <div class="stage">
-                          <div class="block">
-                      <div class="number">3</div>
-                      <div class="text">
-                          Поднятие сельского хозяйства в&nbsp;радиусе на&nbsp;тысячу километров: производство овощей, фруктов, икры, шоколадных конфет
-                      </div>
-                  </div>
-  
-              </div><div class="stage">
-                  
-                  <div class="block">
-                      <div class="number">4</div>
-                      <div class="text">Строительство дворца для&nbsp;турнира</div>
-                  </div>
-                  <div class="block">
-                      <div class="number">5</div>
-                      <div class="text">Размещение гаражей для&nbsp;гостевого автотранспорта</div>
-                  </div>
-              </div><div class="stage">
-                          <div class="block">
-                      <div class="number">6</div>
-                      <div class="text">Постройка сверхмощной радиостанции для&nbsp;передачи всему миру сенсационных результатов</div>
-                  </div>
-  
-              </div>
-  
-          <div class="stage">
-                          <div class="block">
-                      <div class="number">7</div>
-                      <div class="text">Создание аэропорта «Большие Васюки» с&nbsp;регулярным отправлением почтовых самолётов и&nbsp;дирижаблей во&nbsp;все&nbsp;концы света, включая Лос-Анжелос и&nbsp;Мельбурн</div>
-                  </div>
-  
-              </div></div>
         </div>
-      </section>
+      </div>
+    </section>
     <section class="members">
       <div>
         <div class="header-row">
           <h2 style="">Участники турнира</h2>
           <div class="carousel-buttons desktop">
-            <button class="carousel-button left" disabled="">&lt;</button>
+            <button class="carousel-button left">&lt;</button>
             <div class="position">
-              <span class="current">1</span><span>/</span
-              ><span class="all">6</span>
+              <span class="current">2</span><span>/</span><span class="all">6</span>
             </div>
             <button class="carousel-button right">&gt;</button>
           </div>
         </div>
         <div class="carousel">
-          <div
-            class="row"
-            style="
-              transition: transform 0.5s ease-in-out 0s;
-              transform: translateX(0px);
-            "
-          >
+          <div class="row" style="transform: translateX(-355px);">
             <div class="member">
-              <img src="img/portrait.png" />
+              <img src="img/portrait.png">
               <h4>Хозе-Рауль Капабланка</h4>
               <p>Чемпион мира по шахматам</p>
               <button class="about">Подробнее</button>
             </div>
             <div class="member">
-              <img src="img/portrait.png" />
+              <img src="img/portrait.png">
               <h4>Эммануил Ласкер</h4>
               <p>Чемпион мира по шахматам</p>
               <button class="about">Подробнее</button>
             </div>
             <div class="member">
-              <img src="img/portrait.png" />
+              <img src="img/portrait.png">
               <h4>Александр Алехин</h4>
               <p>Чемпион мира по шахматам</p>
               <button class="about">Подробнее</button>
             </div>
             <div class="member">
-              <img src="img/portrait.png" />
+              <img src="img/portrait.png">
               <h4>Арон Нимцович</h4>
               <p>Чемпион мира по шахматам</p>
               <button class="about">Подробнее</button>
             </div>
             <div class="member">
-              <img src="img/portrait.png" />
+              <img src="img/portrait.png">
               <h4>Рихард Рети</h4>
               <p>Чемпион мира по шахматам</p>
               <button class="about">Подробнее</button>
             </div>
             <div class="member">
-              <img src="img/portrait.png" />
+              <img src="img/portrait.png">
               <h4>Остап Бендер</h4>
               <p>Гроссмейстер</p>
               <button class="about">Подробнее</button>
@@ -280,10 +288,9 @@
           </div>
         </div>
         <div class="carousel-buttons mobile">
-          <button class="carousel-button left" disabled="">&lt;</button>
+          <button class="carousel-button left">&lt;</button>
           <div class="position">
-            <span class="current">1</span><span>/</span
-            ><span class="all">6</span>
+            <span class="current">2</span><span>/</span><span class="all">6</span>
           </div>
           <button class="carousel-button right">&gt;</button>
         </div>
@@ -316,5 +323,19 @@
     </footer>
 
     <script src="script.js"></script>
-  </body>
+    <script>function scrollToSection(id) {
+        console.log('Скроллю');
+        var element = document.getElementById(id);
+        var elementRect = element.getBoundingClientRect();
+        var absoluteElementTop = elementRect.top + window.pageYOffset;
+        var middle = absoluteElementTop - (window.innerHeight / 2) + (elementRect.height / 2);
+      
+        window.scrollTo({
+            top: middle,
+            behavior: 'smooth'
+        });
+      }</script>
+  
+
+</body>
 </html>

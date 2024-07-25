@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
+
+
+
   console.log("Движущиеся текстуры");
 
   const root = document.documentElement; // Получаем корневой элемент
