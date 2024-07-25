@@ -72,6 +72,11 @@ body {
   flex-direction: column;
 }
 
+div {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
 .content-wrap {
   max-width: 1222px;
   margin: auto;
@@ -95,12 +100,11 @@ h2 {
   line-height: 135%;
 }
 
-.subheader {
+#stages .subheader {
   font-family: "Golos Text", sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 130%;
-  text-align: center;
   margin-top: 24px;
   margin-bottom: 37px;
 }
@@ -122,7 +126,7 @@ header {
 .noise-overlay,
 .overlay-wrap::before,
 header::before {
-  content: "";
+  /* content: ""; */
   position: absolute;
   top: 0;
   left: 0;
@@ -263,15 +267,15 @@ section.running-line-wrap {
   scrollbar-width: none; /* Firefox */
 }
 
-#support > div {
+#support > .content-wrap {
   display: flex;
   column-gap: 64px;
   row-gap: 24px;
   /* margin-top: 80px; */
   /* margin-bottom: 64px; */
   flex-wrap: wrap;
+  /* flex-direction: column; */
 }
-
 
 span.red {
   color: #f54932;
@@ -288,7 +292,7 @@ span.red {
 #support h3 {
   max-width: 100%;
   width: 764px;
-  margin: auto;
+  margin: auto 0;
 }
 
 img {
@@ -300,8 +304,6 @@ img {
 #seans .content {
   max-width: 704px;
 }
-
-
 
 /* Таблица */
 
@@ -349,7 +351,8 @@ span.crossed::after {
   border-radius: 2px; /* Скругление краёв линии */
 }
 
-#stages .card, .stage {
+#stages .card,
+.stage {
   /* width: 394px; */
   /* height: 112px; */
   padding: 20px;
@@ -363,8 +366,6 @@ span.crossed::after {
   flex-wrap: nowrap;
   position: relative;
 }
-
-
 
 .number {
   width: 36px;
@@ -383,10 +384,8 @@ span.crossed::after {
   display: grid;
   grid-template-columns: 394px 394px 394px;
   grid-template-rows: 112px 112px 136px;
-  margin-top: -32px;
+  /* margin-top: -32px; */
 }
-
-
 
 #support {
   margin-top: 80px;
@@ -437,7 +436,6 @@ h4 {
   align-items: center;
   width: 394px;
   flex-shrink: 0;
-  max-width: 89vw;
 }
 
 #members .header-row {
@@ -565,30 +563,32 @@ section.running-line-wrap > div {
   overflow: visible;
 }
 
-img.plane {
+img.plane.desktop {
   position: absolute;
   right: -60px;
   bottom: 0;
   z-index: 1;
 }
 
-.stages-subheader {
+#stages .subheader {
   color: #3057a2;
   width: 280px;
   position: relative;
   top: -84px;
   left: 302px;
+  text-align: left;
 }
 
 #stages h2 {
   width: 806px;
   margin: 0;
   /* line-height: 120%; */
+  max-width: 100%;
 }
 
 #seans h3 {
-    margin-top: 0;
-    margin-bottom: 45px;
+  margin-top: 0;
+  margin-bottom: 45px;
 }
 
 html {
@@ -604,54 +604,81 @@ html {
 /* Счётчики  */
 
 .bullets {
-    display: flex;
-    gap: 6px; /* Отступ между кружками, можно настроить по необходимости */
+  display: flex;
+  gap: 6px; /* Отступ между кружками, можно настроить по необходимости */
 }
 
 .bullet {
-    width: 10px; /* Ширина кружка */
-    height: 10px; /* Высота кружка */
-    border-radius: 50%; /* Округление до формы кружка */
-    background-color: #D9D9D9; /* Цвет неактивного кружка */
-    cursor: pointer; /* Курсор в виде руки при наведении */
-    transition: background-color 0.3s ease; /* Плавное изменение цвета при активации */
+  width: 10px; /* Ширина кружка */
+  height: 10px; /* Высота кружка */
+  border-radius: 50%; /* Округление до формы кружка */
+  background-color: #d9d9d9; /* Цвет неактивного кружка */
+  cursor: pointer; /* Курсор в виде руки при наведении */
+  transition: background-color 0.3s ease; /* Плавное изменение цвета при активации */
 }
 
 /* Стили для активного кружка */
 .bullet.active {
-    background-color: #313131; /* Цвет активного кружка */
+  background-color: #313131; /* Цвет активного кружка */
 }
 
 .carousel-button svg {
-    width: 10px;
-    height: 18px;
-    flex-shrink: 0;
+  width: 10px;
+  height: 18px;
+  flex-shrink: 0;
 }
 
 button.carousel-button.right svg {
-    position: relative;
-    left: 2px;
+  position: relative;
+  left: 2px;
 }
 
 button.carousel-button.left svg {
-    position: relative;
-    right: 2px;
+  position: relative;
+  right: 2px;
 }
 
 #members .carousel-buttons.desktop {
-    position: absolute;
-    right: 0;
-    top: -120px;
+  position: absolute;
+  right: 0;
+  top: -120px;
 }
 
 /* Pixel Perfect */
 
 header .content-wrap {
-    max-width: 1366px;
-    padding-left: 60px;
+  max-width: 1366px;
+  padding-left: 60px;
 }
 
 section#stages {
-    /* margin-top: 79px; */
-    margin-bottom: 200px;
+  /* margin-top: 79px; */
+  margin-bottom: 200px;
+}
+
+/* Адаптив */
+
+#stages .content-wrap {
+  overflow: visible;
+}
+
+.plane.text {
+  width: 450px;
+}
+
+.blue {
+  color: #3057a2;
+}
+
+img.tablet.plane {
+  display: none;
+}
+
+header button {
+  width: 263px;
+  height: 72px;
+  padding: 20px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

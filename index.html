@@ -8,7 +8,8 @@
     />
     <title>Основная HTML-страница</title>
     <link rel="stylesheet" href="style-1366.css" />
-    <link rel="stylesheet" href="style-375.css" />
+    <link rel="stylesheet" href="style-426-1365.css" />
+    <link rel="stylesheet" href="style-425.css" />
     <link rel="stylesheet" href="style-320.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -35,16 +36,10 @@
             васюкинского турнира по&nbsp;шахматам
           </p>
           <div class="row" style="gap: 16px">
-            <button
-              style="width: 263px; height: 72px; padding: 16px 40px"
-              onclick="scrollToSection('support')"
-            >
-              Поддержать шахматную мысль</button
-            ><button
-              style="width: 263px; height: 72px; padding: 14px 50px"
-              onclick="scrollToSection('seans-info')"
-              class="chameleon"
-            >
+            <button onclick="scrollToSection('support')">
+              Поддержать шахматную мысль
+            </button>
+            <button onclick="scrollToSection('seans-info')" class="chameleon">
               Подробнее о&nbsp;турнире
             </button>
           </div>
@@ -119,7 +114,7 @@
               </tr>
             </tbody>
           </table>
-          <p class="mihelson">
+          <p class="blue">
             По&nbsp;всем вопросам обращаться в&nbsp;администрацию
             к&nbsp;К.&nbsp;Михельсону
           </p>
@@ -128,14 +123,13 @@
     </section>
     <section id="stages">
       <div class="content-wrap">
-        <div>
+        <div class="content">
           <h2>Этапы преображения Васюков</h2>
-          <p class="stages-subheader">
-            Будущие источники обогащения васюкинцев
-          </p>
+          <p class="subheader">Будущие источники обогащения васюкинцев</p>
         </div>
         <div class="stage-grid desktop">
           <div class="stage">
+            <img class="tablet plane" src="img\plane.png" />
             <div class="number">1</div>
             <div class="text">
               Строительство железнодорожной магистрали Москва-Васюки
@@ -180,15 +174,12 @@
             style="grid-row-start: 3; grid-column-start: 2; grid-column-end: 4"
           >
             <div class="number">7</div>
-            <div class="text">
+            <div class="plane text">
               Создание аэропорта «Большие Васюки» с&nbsp;регулярным отправлением
               почтовых самолётов и&nbsp;дирижаблей во&nbsp;все&nbsp;концы света,
               включая Лос-Анжелос и&nbsp;Мельбурн
             </div>
-            <img
-              src="img\plane.png"
-              style="position: absolute; right: -60px; bottom: 0"
-            />
+            <img class="desktop plane" src="img\plane.png" />
           </div>
         </div>
         <div class="carousel stages mobile">
@@ -200,7 +191,7 @@
             </div>
             <button class="carousel-button right">&gt;</button>
           </div>
-          <img class="plane" src="img\plane.png" />
+          <img class="plane mobile" src="img\plane.png" />
           <div class="row" style="transform: translateX(0px)">
             <div class="card">
               <div class="block">
@@ -280,16 +271,11 @@
             </button>
             <div class="position">
               <div class="bullets">
-                <div
-                  class="bullet"></div>
-                <div
-                  class="bullet"></div>
-                <div
-                  class="bullet"></div>
-                <div
-                  class="bullet"></div>
-                <div
-                  class="bullet"></div>
+                <div class="bullet active"></div>
+                <div class="bullet"></div>
+                <div class="bullet"></div>
+                <div class="bullet"></div>
+                <div class="bullet"></div>
               </div>
             </div>
             <button class="carousel-button right">
@@ -321,7 +307,7 @@
           <div class="carousel-buttons desktop">
             <button class="carousel-button left" disabled="">&lt;</button>
             <div class="position">
-              <span class="current">3</span><span>/</span
+              <span class="current">1</span><span>/</span
               ><span class="all">6</span>
             </div>
             <button class="carousel-button right">&gt;</button>

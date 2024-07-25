@@ -1,0 +1,71 @@
+@media (min-width: 426px) and (max-width: 1365px) {
+  header button {
+    width: 100% !important;
+    padding: unset !important;
+    height: 47px !important;
+  }
+
+  button.chameleon {
+    background: white;
+    border: none;
+    opacity: 90%;
+  }
+
+  button.chameleon:hover {
+    background: #fbce51;
+    color: inherit;
+  }
+  .content-wrap {
+    max-width: 90vw;
+  }
+
+  #members .carousel-buttons.desktop {
+    position: unset;
+  }
+
+  .stage-grid.desktop {
+    display: flex;
+  }
+
+  #support img {
+    order: -1;
+  }
+
+  .content-wrap {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 70vw;
+  }
+
+  .plane.desktop {
+    display: none;
+  }
+
+  #stages .subheader {
+    position: unset;
+    text-align: left;
+    font-size: 20px;
+    /* margin-bottom: 3em; */
+  }
+
+  .carousel-buttons.desktop {
+    order: 1;
+  }
+
+  .carousel.members.cycled {
+    row-gap: 30px;
+  }
+
+  .stage {
+    width: 100%;
+    position: relative;
+  }
+
+  img.plane.tablet {
+    position: absolute;
+    right: -150px;
+    top: -190px;
+  }
+  .tablet {display:block}
+}
