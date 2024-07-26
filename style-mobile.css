@@ -13,7 +13,7 @@
     font-size: 28px;
   }
   .desktop {
-    display: none;
+    display: none!important;
   }
   .mobile {
     display: block !important;
