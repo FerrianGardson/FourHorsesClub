@@ -27,7 +27,7 @@
     display: flex;
   }
 
-  #support img {
+  #support .img {
     order: -1;
   }
 

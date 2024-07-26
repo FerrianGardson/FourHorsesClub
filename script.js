@@ -1,24 +1,27 @@
 document.addEventListener("DOMContentLoaded", function () {
-  console.log("Движущиеся текстуры");
+  // console.log("Анимация шума");
 
-  const root = document.documentElement; // Получаем корневой элемент
-  const maxPosY = 1000;
-  const speed = 0.25; // Скорость изменения
-  let posY = 0;
+  let backgroundPositionY = 0;
+  document.documentElement.style.setProperty(
+    "--background-position",
+    `0px 0px`
+  );
 
-  function animateBackgroundPosition() {
-    posY -= speed;
-    if (posY > maxPosY) {
-      posY = 0; // Сбросить позицию при достижении максимального значения
-    }
-
-    // Обновляем переменную CSS --background-position в :root
-    // root.style.setProperty("--background-position", `0px ${posY}px`);
-
-    requestAnimationFrame(animateBackgroundPosition);
+  function updateBackgroundPosition() {
+    backgroundPositionY -= 1000;
+    document.documentElement.style.setProperty(
+      "--background-position",
+      `0px ${backgroundPositionY}px`
+    );
   }
 
-  console.log("Карусель");
+  // Немедленный первый вызов
+  updateBackgroundPosition();
+
+  // Повторный вызов каждые 10 секунд
+  setInterval(updateBackgroundPosition, 10000);
+
+  // console.log("Карусель");
 
   document.querySelectorAll(".carousel").forEach((carouselContainer) => {
     const rows = carouselContainer.querySelectorAll(".row");

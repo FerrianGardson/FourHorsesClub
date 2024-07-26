@@ -123,10 +123,8 @@ header {
   box-sizing: border-box;
 }
 
-.noise-overlay,
-.overlay-wrap::before,
-header::before {
-  /* content: ""; */
+.noise::before, .stage::before, #stages .card::before {
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -134,7 +132,8 @@ header::before {
   height: 100%;
   background-image: url("img/noise.png");
   background-repeat: repeat;
-  background-position: 0px 0px;
+  background-position: var(    --background-position  );
+  transition: background-position 10s linear;
   display: block;
   mix-blend-mode: color-burn; /* Применяет color-burn только к noise.png */
   pointer-events: none; /* Чтобы не блокировать взаимодействие с содержимым */
@@ -142,7 +141,7 @@ header::before {
   max-width: none;
 }
 
-#seans img {
+#seans .img {
   /* position: relative; */
   max-width: 474px;
   /* height: 527px; */
@@ -150,11 +149,7 @@ header::before {
   /* top: -3px; */
 }
 
-.overlay-wrap {
-  position: relative;
-  box-sizing: border-box;
-  overflow: visible;
-}
+
 
 header .content {
   width: 542px;
@@ -546,7 +541,7 @@ header::before {
   background-position: var(
     --background-position
   ); /* Начальное положение фона */
-  display: block; /* Для ::before псевдоэлементов */
+  /* display: block; */ /* Для ::before псевдоэлементов */
 }
 
 /* Адаптив */
@@ -670,7 +665,7 @@ section#stages {
   color: #3057a2;
 }
 
-img.tablet.plane {
+.tablet {
   display: none;
 }
 
@@ -681,4 +676,8 @@ header button {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.noise {
+    position: relative;
 }
