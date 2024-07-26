@@ -27,7 +27,11 @@
     display: none;
   }
   .mobile {
-    display: block;
+    display: block!important;
+  }
+
+  .table.mobile {
+    display:flex!important;
   }
   img {
     width: 335px !important;
@@ -51,7 +55,7 @@
   }
 
   .carousel-buttons.mobile {
-    display: flex;
+    display: flex!important;
     width: fit-content;
     margin: auto;
     margin-top: 40px;

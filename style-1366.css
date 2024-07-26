@@ -309,7 +309,7 @@ td {
 
 /* Стили для первой ячейки в каждой строке */
 tbody td:nth-child(1) {
-  opacity: 0.7; /* Полупрозрачность 70% */
+  color: #6f6f6f; /* Полупрозрачность 70% */
   border-right: 2px solid #d0d0d0;
   padding-left: 0;
   width: 290px;
@@ -546,9 +546,7 @@ header::before {
 
 /* Адаптив */
 
-.mobile {
-  display: none;
-}
+
 p.mihelson {
   color: #3057a2;
   /* padding-left: 16px; */
@@ -680,4 +678,38 @@ header button {
 
 .noise {
     position: relative;
+}
+
+.gray, .position.numbers {
+    color: #838383;
+}
+
+.position.numbers span.current {
+    color: #313131;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.table.mobile .gray {
+  margin-bottom: 12px;
+}
+
+.table.mobile .bold {
+  margin-bottom: 16px;
+}
+
+.table.mobile .block {
+  border-bottom: 2px solid #D0D0D0;
+  margin-bottom: 16px;;
+}
+
+.table.mobile {
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile {
+  display: none!important;
 }
