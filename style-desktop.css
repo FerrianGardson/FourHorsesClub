@@ -115,16 +115,88 @@ h2 {
 
 header {
   background-color: #e9ded4;
-  background-image: url("img/header-pic.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
   height: 700px;
   padding-top: 26px;
   padding-left: 72px;
   position: relative;
   margin: 0;
   box-sizing: border-box;
+  overflow: hidden;
+  
+}
+
+header .background {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  bottom:0;
+  left:0;
+  pointer-events: none;
+}
+
+header .background img {
+  position: absolute;
+}
+
+header .background img.sun {
+  left: 635px;
+  bottom: -42px;
+  z-index: 0;
+}
+
+header .background img.city {
+  left: -32px;
+  bottom: -137px;
+  scale: 1.15;
+  z-index: 1;
+}
+
+img.horse {
+  bottom: -180px;
+  right: 368px;
+  z-index: 2;
+  width: auto;
+  animation: gravity 2s ease-in-out infinite;
+}
+
+@keyframes gravity {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-90px); /* Опускает элемент вниз на 100% высоты видимой области */
+  }
+  100% {
+    transform: translateY(0); /* Опускает элемент вниз на 100% высоты видимой области */
+  }
+}
+
+header .content-wrap {
+  position: relative;
+  overflow: visible;
+}
+
+.wrap {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Определение ключевых кадров для анимации */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Применение анимации к элементу с классом "sun" */
+.sun {
+  animation: rotate 10s linear infinite;
 }
 
 .noise::before,
@@ -238,6 +310,7 @@ section.running-line-wrap {
   box-sizing: border-box;
   height: 60px;
   text-transform: uppercase;
+  z-index: 100;
 }
 
 .running-line {
@@ -520,16 +593,14 @@ footer p {
 .running-line {
   animation: text 8s infinite linear;
   padding-left: 100%;
-  /* white-space: nowrap; */
 }
 
 @keyframes text {
   0% {
     transform: translate(0, 0);
   }
-
   100% {
-    transform: translate(-150%, 0);
+    transform: translate(-100%, 0);
   }
 }
 
@@ -729,6 +800,8 @@ header p.subheader {
   line-height: 130%;
   margin-top: 26px;
   margin-bottom: 39px;
+  z-index: 100;
+  position: relative;
 }
 
 .position {

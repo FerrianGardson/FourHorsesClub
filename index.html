@@ -44,7 +44,17 @@
             </button>
           </div>
         </div>
+        <div class="background">
+          <div class="wrap">
+            <div class="city wrap">
+              <img class="city" src="/img/city-clean.png" alt="" />
+              <img src="img/horse.png" alt="" class="horse">
+            </div>
+            <img class="sun" src="/img/sun.svg" alt="" />
+          </div>
+        </div>
       </div>
+
     </header>
     <section class="running-line-wrap">
       <div class="running-line">
@@ -109,7 +119,9 @@
             </div>
             <div class="row">
               <div class="gray">Взнос на телеграммы:</div>
-              <div class="bold"><span class="crossed">100 руб.</span>  21 руб. 16&nbsp;коп.</div>
+              <div class="bold">
+                <span class="crossed">100 руб.</span>  21 руб. 16&nbsp;коп.
+              </div>
             </div>
           </div>
           <p class="blue">
@@ -420,7 +432,6 @@
     <script src="script.js"></script>
     <script>
       function scrollToSection(id) {
-        console.log("Скроллю");
         var element = document.getElementById(id);
         var elementRect = element.getBoundingClientRect();
         var absoluteElementTop = elementRect.top + window.pageYOffset;

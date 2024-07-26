@@ -106,7 +106,14 @@
     padding-bottom: 40px;
 }
 
+img.city {
+  bottom: -33px!important;
+}
 
+img.horse {
+  bottom: -30px;
+  right: 100px;
+}
 
 
 

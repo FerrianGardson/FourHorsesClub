@@ -8,10 +8,10 @@ document.addEventListener("DOMContentLoaded", function () {
   );
 
   function updateBackgroundPosition() {
-    backgroundPositionY -= 1000;
+    backgroundPositionY += 1000;
     document.documentElement.style.setProperty(
       "--background-position",
-      `0px ${backgroundPositionY}px`
+      `${backgroundPositionY}px 0px`
     );
   }
 
