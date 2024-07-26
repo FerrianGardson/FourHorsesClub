@@ -5,17 +5,6 @@
     height: 47px !important;
   }
 
-  button.chameleon {
-    background: white;
-    border: none;
-    opacity: 90%;
-  }
-
-  button.chameleon:hover {
-    background: #fbce51;
-    color: inherit;
-  }
-
   h2 {
     font-size: 36px;
     line-height: 120%;
@@ -27,11 +16,11 @@
     display: none;
   }
   .mobile {
-    display: block!important;
+    display: block !important;
   }
 
   .table.mobile {
-    display:flex!important;
+    display: flex !important;
   }
   img {
     width: 335px !important;
@@ -55,7 +44,7 @@
   }
 
   .carousel-buttons.mobile {
-    display: flex!important;
+    display: flex !important;
     width: fit-content;
     margin: auto;
     margin-top: 40px;
@@ -166,5 +155,18 @@
 
   #stages .content-wrap {
     overflow: hidden;
+  }
+}
+
+@media (max-width: 320px) {
+  .content-wrap {
+    max-width: 285px !important;
+  }
+  h3 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 32px;
   }
 }

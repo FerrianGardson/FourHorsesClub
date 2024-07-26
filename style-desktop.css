@@ -1,3 +1,19 @@
+h1,
+h2,
+h3 {
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+  font-size: 60px;
+  line-height: 110%;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
 /* Google Web Fonts */
 
 .merriweather-light {
@@ -83,18 +99,6 @@ div {
   overflow: hidden;
 }
 
-h1,
-h2,
-h3 {
-  font-family: "Merriweather", serif;
-  font-weight: 400;
-  font-style: normal;
-  text-transform: uppercase;
-  font-size: 60px;
-  line-height: 110%;
-  margin: 0;
-}
-
 h2 {
   font-size: 54px;
   line-height: 135%;
@@ -123,7 +127,9 @@ header {
   box-sizing: border-box;
 }
 
-.noise::before, .stage::before, #stages .card::before {
+.noise::before,
+.stage::before,
+#stages .card::before {
   content: "";
   position: absolute;
   top: 0;
@@ -132,7 +138,7 @@ header {
   height: 100%;
   background-image: url("img/noise.png");
   background-repeat: repeat;
-  background-position: var(    --background-position  );
+  background-position: var(--background-position);
   transition: background-position 10s linear;
   display: block;
   mix-blend-mode: color-burn; /* Применяет color-burn только к noise.png */
@@ -148,8 +154,6 @@ header {
   /* scale: 110%; */
   /* top: -3px; */
 }
-
-
 
 header .content {
   width: 542px;
@@ -546,7 +550,6 @@ header::before {
 
 /* Адаптив */
 
-
 p.mihelson {
   color: #3057a2;
   /* padding-left: 16px; */
@@ -641,7 +644,7 @@ button.carousel-button.left svg {
 
 header .content-wrap {
   max-width: 1366px;
-  padding-left: 60px;
+  padding-left: 36px;
 }
 
 section#stages {
@@ -677,39 +680,62 @@ header button {
 }
 
 .noise {
-    position: relative;
+  position: relative;
 }
 
-.gray, .position.numbers {
-    color: #838383;
+.gray,
+.position.numbers {
+  color: #838383;
 }
 
 .position.numbers span.current {
-    color: #313131;
+  color: #313131;
 }
 
 .bold {
   font-weight: 600;
 }
 
-.table.mobile .gray {
-  margin-bottom: 12px;
-}
-
-.table.mobile .bold {
-  margin-bottom: 16px;
-}
-
-.table.mobile .block {
-  border-bottom: 2px solid #D0D0D0;
-  margin-bottom: 16px;;
-}
-
-.table.mobile {
+.table {
   display: flex;
   flex-direction: column;
+  margin-bottom: 31px;
+}
+
+.table .row > div {
+  padding: 16px 16px 14px 0;
+}
+
+.table .row > div.bold {
+  padding-left: 16px;
+}
+
+.table .gray {
+  width: 306px;
+  border-right: 2px solid #d0d0d0;
+}
+
+.table .row {
+  border-bottom: 2px solid #d0d0d0;
 }
 
 .mobile {
-  display: none!important;
+  display: none !important;
+}
+
+header p.subheader {
+  text-align: center;
+  font-size: 18px;
+  line-height: 130%;
+  margin-top: 26px;
+  margin-bottom: 39px;
+}
+
+.position {
+  color: #838383;
+  display: flex;
+  gap: 2px;
+}
+.position .current {
+  color: #313131;
 }
